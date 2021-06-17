@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="main">
+      <UniqueIdentifier>{b6e9f14b-a650-45ef-b27f-91cee793ae85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="c_sstring">
+      <UniqueIdentifier>{560cd157-beec-4f0f-9342-f843d1356e81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header">
+      <UniqueIdentifier>{98600eec-2578-4e81-b92c-95daca4673e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test">
+      <UniqueIdentifier>{f5f9ffc3-77d1-4dde-a2de-5b99bd9a8092}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libft">
+      <UniqueIdentifier>{bd033a9c-eae6-4edc-93d6-f988dadad9b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\test_c_sstring">
+      <UniqueIdentifier>{de351302-24ac-4bc0-8652-ea2800c33baa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="c_dstring">
+      <UniqueIdentifier>{eb1314e4-86cc-49b5-af48-e8e350e6f2e0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\main\main.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\c_sstring\c_sstring.c">
+      <Filter>c_sstring</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\c_sstring\constructor.c">
+      <Filter>c_sstring</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\c_sstring\destructor.c">
+      <Filter>c_sstring</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\c_sstring\array_size.c">
+      <Filter>c_sstring</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\c_sstring\index_operators.c">
+      <Filter>c_sstring</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\c_sstring\push_pop_back.c">
+      <Filter>c_sstring</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\c_sstring\copy_data_source.c">
+      <Filter>c_sstring</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\c_sstring\concatenation.c">
+      <Filter>c_sstring</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\c_sstring\compare_data.c">
+      <Filter>c_sstring</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\c_sstring\search.c">
+      <Filter>c_sstring</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\c_sstring\is_check.c">
+      <Filter>c_sstring</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\c_sstring\to_upper.c">
+      <Filter>c_sstring</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\c_sstring\to_lower.c">
+      <Filter>c_sstring</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\c_sstring\convert_to_int.c">
+      <Filter>c_sstring</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\c_sstring\convert_to_char_array.c">
+      <Filter>c_sstring</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_atoi.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_bzero.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_calloc.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_isalnum.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_isalpha.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_isascii.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_isdigit.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_isprint.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_itoa.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_memccpy.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_memchr.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_memcmp.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_memcpy.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_memmove.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_memset.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_putchar_fd.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_putendl_fd.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_putnbr_fd.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_putstr_fd.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_split.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_strchr.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_strdup.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_strjoin.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_strlcat.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_strlcpy.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_strlen.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_strmapi.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_strncmp.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_strnstr.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_strrchr.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_strtrim.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_substr.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_tolower.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\ft_toupper.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libft\LIbft.c">
+      <Filter>libft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\test\test_c_sstring\ArraySize.cpp">
+      <Filter>test\test_c_sstring</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\test\test_c_sstring\CompareData.cpp">
+      <Filter>test\test_c_sstring</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\test\test_c_sstring\ConcatenationData.cpp">
+      <Filter>test\test_c_sstring</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\test\test_c_sstring\ConvertToCharArray.cpp">
+      <Filter>test\test_c_sstring</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\test\test_c_sstring\ConvertToInt.cpp">
+      <Filter>test\test_c_sstring</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\test\test_c_sstring\CopyData.cpp">
+      <Filter>test\test_c_sstring</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\test\test_c_sstring\IndexOperators.cpp">
+      <Filter>test\test_c_sstring</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\test\test_c_sstring\Initialization.cpp">
+      <Filter>test\test_c_sstring</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\test\test_c_sstring\IsCheck.cpp">
+      <Filter>test\test_c_sstring</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\test\test_c_sstring\PushPopBack.cpp">
+      <Filter>test\test_c_sstring</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\test\test_c_sstring\SearchData.cpp">
+      <Filter>test\test_c_sstring</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\test\test_c_sstring\test_string.cpp">
+      <Filter>test\test_c_sstring</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\test\test_c_sstring\ToLower.cpp">
+      <Filter>test\test_c_sstring</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\test\test_c_sstring\ToUpper.cpp">
+      <Filter>test\test_c_sstring</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\c_dstring\c_dstring.cpp">
+      <Filter>c_dstring</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\c_sstring\c_sstring.h">
+      <Filter>c_sstring</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\header\c_header.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\header\cpp_header.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\header\header.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\header\test.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\header\42SchoolCHeader.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\test\test_c_sstring\test_string.h">
+      <Filter>test\test_c_sstring</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libft\Libft.h">
+      <Filter>libft</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\c_dstring\c_dstring.h">
+      <Filter>c_dstring</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

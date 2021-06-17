@@ -1,0 +1,46 @@
+﻿  c_dstring.cpp
+  main.cpp
+  ArraySize.cpp
+  CompareData.cpp
+  ConcatenationData.cpp
+  ConvertToCharArray.cpp
+  ConvertToInt.cpp
+  CopyData.cpp
+  IndexOperators.cpp
+  Initialization.cpp
+E:\Private\Programmer\Reposes\Repos C++\42SchoolCHeader\string\test\test_c_sstring\Initialization.cpp(18,39): error C2039: "capasity": не является членом "c_sstring".
+E:\Private\Programmer\Reposes\Repos C++\42SchoolCHeader\string\c_sstring\c_sstring.h(7): message : см. объявление "c_sstring"
+E:\Private\Programmer\Reposes\Repos C++\42SchoolCHeader\string\test\test_c_sstring\Initialization.cpp(24,45): error C2039: "capasity": не является членом "c_sstring".
+E:\Private\Programmer\Reposes\Repos C++\42SchoolCHeader\string\c_sstring\c_sstring.h(7): message : см. объявление "c_sstring"
+E:\Private\Programmer\Reposes\Repos C++\42SchoolCHeader\string\test\test_c_sstring\Initialization.cpp(32,39): error C2039: "capasity": не является членом "c_sstring".
+E:\Private\Programmer\Reposes\Repos C++\42SchoolCHeader\string\c_sstring\c_sstring.h(7): message : см. объявление "c_sstring"
+E:\Private\Programmer\Reposes\Repos C++\42SchoolCHeader\string\test\test_c_sstring\Initialization.cpp(41,45): error C2039: "capasity": не является членом "c_sstring".
+E:\Private\Programmer\Reposes\Repos C++\42SchoolCHeader\string\c_sstring\c_sstring.h(7): message : см. объявление "c_sstring"
+E:\Private\Programmer\Reposes\Repos C++\42SchoolCHeader\string\test\test_c_sstring\Initialization.cpp(49,39): error C2039: "capasity": не является членом "c_sstring".
+E:\Private\Programmer\Reposes\Repos C++\42SchoolCHeader\string\c_sstring\c_sstring.h(7): message : см. объявление "c_sstring"
+E:\Private\Programmer\Reposes\Repos C++\42SchoolCHeader\string\test\test_c_sstring\Initialization.cpp(58,45): error C2039: "capasity": не является членом "c_sstring".
+E:\Private\Programmer\Reposes\Repos C++\42SchoolCHeader\string\c_sstring\c_sstring.h(7): message : см. объявление "c_sstring"
+E:\Private\Programmer\Reposes\Repos C++\42SchoolCHeader\string\test\test_c_sstring\Initialization.cpp(68,39): error C2039: "capasity": не является членом "c_sstring".
+E:\Private\Programmer\Reposes\Repos C++\42SchoolCHeader\string\c_sstring\c_sstring.h(7): message : см. объявление "c_sstring"
+E:\Private\Programmer\Reposes\Repos C++\42SchoolCHeader\string\test\test_c_sstring\Initialization.cpp(77,45): error C2039: "capasity": не является членом "c_sstring".
+E:\Private\Programmer\Reposes\Repos C++\42SchoolCHeader\string\c_sstring\c_sstring.h(7): message : см. объявление "c_sstring"
+  IsCheck.cpp
+  PushPopBack.cpp
+  SearchData.cpp
+  ToLower.cpp
+  ToUpper.cpp
+  test_string.cpp
+  Создание кода...
+E:\Private\Programmer\Reposes\Repos C++\42SchoolCHeader\string\c_dstring\c_dstring.cpp(53): error C4716: c_dstring::at: должна возвращать значение
+E:\Private\Programmer\Reposes\Repos C++\42SchoolCHeader\string\c_dstring\c_dstring.cpp(44): error C4716: c_dstring::is_empty: должна возвращать значение
+E:\Private\Programmer\Reposes\Repos C++\42SchoolCHeader\string\c_dstring\c_dstring.cpp(61): error C4716: c_dstring::back: должна возвращать значение
+E:\Private\Programmer\Reposes\Repos C++\42SchoolCHeader\string\c_dstring\c_dstring.cpp(57): error C4716: c_dstring::front: должна возвращать значение
+E:\Private\Programmer\Reposes\Repos C++\42SchoolCHeader\string\c_dstring\c_dstring.cpp(92): error C4716: c_dstring::compare_chararray: должна возвращать значение
+E:\Private\Programmer\Reposes\Repos C++\42SchoolCHeader\string\c_dstring\c_dstring.cpp(96): error C4716: c_dstring::compare_c_sstring: должна возвращать значение
+E:\Private\Programmer\Reposes\Repos C++\42SchoolCHeader\string\c_dstring\c_dstring.cpp(101): error C4716: c_dstring::search_char: должна возвращать значение
+E:\Private\Programmer\Reposes\Repos C++\42SchoolCHeader\string\c_dstring\c_dstring.cpp(105): error C4716: c_dstring::search_chararray: должна возвращать значение
+E:\Private\Programmer\Reposes\Repos C++\42SchoolCHeader\string\c_dstring\c_dstring.cpp(109): error C4716: c_dstring::search_c_sstring: должна возвращать значение
+E:\Private\Programmer\Reposes\Repos C++\42SchoolCHeader\string\c_dstring\c_dstring.cpp(118): error C4716: c_dstring::is_digit: должна возвращать значение
+E:\Private\Programmer\Reposes\Repos C++\42SchoolCHeader\string\c_dstring\c_dstring.cpp(114): error C4716: c_dstring::is_alpha: должна возвращать значение
+E:\Private\Programmer\Reposes\Repos C++\42SchoolCHeader\string\c_dstring\c_dstring.cpp(126): error C4716: c_dstring::is_print: должна возвращать значение
+E:\Private\Programmer\Reposes\Repos C++\42SchoolCHeader\string\c_dstring\c_dstring.cpp(122): error C4716: c_dstring::is_alnum: должна возвращать значение
