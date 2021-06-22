@@ -12,5 +12,5 @@ void c_sstring_copy_chararray(t_c_sstring* str, char* arr, int size)
 }
 void c_sstring_copy_c_sstring(t_c_sstring* str1, t_c_sstring* str2)
 {
-    str1->m_size = ft_strlcpy(str1->m_array, str2->m_array, str2->size);
+    str1->m_size = ft_strlcpy(str1->m_array, str2->m_array, (size_t)str2->size);
 }

@@ -1,54 +1,53 @@
 #pragma once
 #include "../header/42SchoolCHeader.h"
-#include "../libft/Libft.h"
 
 typedef struct c_sstring t_c_sstring;
 
 struct c_sstring
 {
-    char*   m_array;
-    int	    m_size;
-    int	    m_capacity;
+    char*  m_array;
+    int	   m_size;
+    int	   m_capacity;
 
-    void (*setdata)(t_c_sstring*, char* arr, int size, int capasity);
-    void (*setdata_empty)(t_c_sstring* str, char* arr, int capasity);
+    void  (*setdata)(t_c_sstring*, char* arr, int size, int capasity);
 
-    int (*size)(t_c_sstring*);
-    int (*capacity)(t_c_sstring*);
-    bool (*is_empty)(t_c_sstring*);
-    void (*clear)(t_c_sstring*);
+    int   (*size)(t_c_sstring*);
+    int   (*capacity)(t_c_sstring*);
+    bool  (*is_empty)(t_c_sstring*);
+    bool  (*is_null)(t_c_sstring* str);
+    void  (*clear)(t_c_sstring*);
 
     char* (*at)(t_c_sstring*, int index);
     char* (*front)(t_c_sstring*);
     char* (*back)(t_c_sstring*);
 
-    void (*push_back)(t_c_sstring*, char symbol);
-    void (*pop_back)(t_c_sstring*);
+    void  (*push_back)(t_c_sstring*, char symbol);
+    void  (*pop_back)(t_c_sstring*);
 
-    void (*copy_chararray)(t_c_sstring*, char* arr, int size);
-    void (*copy_c_sstring)(t_c_sstring*, t_c_sstring* str);
-    void (*concatenation_chararray)(t_c_sstring*, char* arr, int size);
-    void (*concatenation_c_sstring)(t_c_sstring*, t_c_sstring* str);
+    void  (*copy_chararray)(t_c_sstring*, char* arr, int size);
+    void  (*copy_c_sstring)(t_c_sstring*, t_c_sstring* str);
+    void  (*concatenation_chararray)(t_c_sstring*, char* arr, int size);
+    void  (*concatenation_c_sstring)(t_c_sstring*, t_c_sstring* str);
 
-    int (*compare_chararray)(t_c_sstring*, char* arr, int size);
-    int (*compare_c_sstring)(t_c_sstring*, t_c_sstring* str);
+    int   (*compare_chararray)(t_c_sstring*, char* arr, int size);
+    int   (*compare_c_sstring)(t_c_sstring*, t_c_sstring* str);
 
     char* (*search_char)(t_c_sstring*, char symbol);
     char* (*search_chararray)(t_c_sstring*, char* arr, int size);
     char* (*search_c_sstring)(t_c_sstring*, t_c_sstring* str);
 
-    bool (*is_alpha)(t_c_sstring*);
-    bool (*is_digit)(t_c_sstring*);
-    bool (*is_alnum)(t_c_sstring*);
-    bool (*is_print)(t_c_sstring*);
+    bool  (*is_alpha)(t_c_sstring*);
+    bool  (*is_digit)(t_c_sstring*);
+    bool  (*is_alnum)(t_c_sstring*);
+    bool  (*is_print)(t_c_sstring*);
 
-    void (*to_upper_chararray)(t_c_sstring*, char* arr);
-    void (*to_upper_c_sstring)(t_c_sstring*, t_c_sstring* str);
-    void (*to_lower_chararray)(t_c_sstring*, char* arr);
-    void (*to_lower_c_sstring)(t_c_sstring*, t_c_sstring* str);
+    void  (*to_upper_chararray)(t_c_sstring*, char* arr);
+    void  (*to_upper_c_sstring)(t_c_sstring*, t_c_sstring* str);
+    void  (*to_lower_chararray)(t_c_sstring*, char* arr);
+    void  (*to_lower_c_sstring)(t_c_sstring*, t_c_sstring* str);
 
-    void (*convert_to_int)(t_c_sstring*, int* value);
-    void (*convert_to_chararray)(t_c_sstring*, char* arr);
+    void  (*convert_to_int)(t_c_sstring*, int* value);
+    void  (*convert_to_chararray)(t_c_sstring*, char* arr);
 };
 
 void c_sstring_constructor(t_c_sstring* str);
@@ -66,13 +65,14 @@ void c_sstring_constructor_to_upper_lower(t_c_sstring* str);
 
 void c_sstring_destructor(t_c_sstring* str);
 
-void c_sstring_setdata_empty(t_c_sstring* str, char* arr, int capasity);
 void c_sstring_setdata(t_c_sstring*, char* arr, int size, int capasity);
 
 int c_sstring_size(t_c_sstring*);
 int c_sstring_capacity(t_c_sstring*);
 bool c_sstring_is_empty(t_c_sstring*);
+bool  c_sstring_is_null(t_c_sstring* str);
 void c_sstring_clear(t_c_sstring*);
+
 
 char* c_sstring_at(t_c_sstring*, int index);
 char* c_sstring_front(t_c_sstring*);
