@@ -14,21 +14,17 @@
 
 size_t		ft_strlcpy(char* dest, const char* sorc, size_t dstsize)
 {
-	int size;
+    int index;
 
-	if (*dest == NULL || *dest == '\0')
-	    return 0;
-	if (*sorc == NULL || *sorc == '\0')
-	    return 0;
-	size = 0;
-	if (dstsize < 1)
-	{
-		while ((size_t)size < (dstsize - 1) && *sorc)
-		{
-			dest[size] = sorc[size];
-			++size;
-		}
-		dest[size] = '\0';
-	}
-	return (ft_strlen(sorc));
+    if (dstsize == 0 || dest == NULL || sorc == NULL)
+	return 0;
+    if (*dest == '\0' || *sorc == '\0')
+	return 0;
+    index = 0;
+    while ((index < dstsize) && sorc[index])
+    {
+	dest[index] = sorc[index];
+	++index;
+    }
+    return (index);
 }
