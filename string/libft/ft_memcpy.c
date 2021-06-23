@@ -20,7 +20,7 @@ void*		ft_memcpy(void* destination, const void* source, size_t size)
 
 	dest_ptr = (char*)destination;
 	srce_ptr = (const char*)source;
-	if (dest_ptr == NULL || srce_ptr == NULL)
+	if (size == 0 || dest_ptr == NULL || srce_ptr == NULL)
 		return NULL;
 	index = 0;
 	while (srce_ptr[index] != '\0' && index != size)
