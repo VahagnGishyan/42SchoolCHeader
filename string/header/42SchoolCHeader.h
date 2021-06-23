@@ -3,6 +3,7 @@
 #include "c_header.h"
 #include "../libft/Libft.h"
 #include "../c_sstring/c_sstring.h"
+//#include "../c_dstring/c_dstring.h"
 
 
 typedef unsigned short int ushint;
