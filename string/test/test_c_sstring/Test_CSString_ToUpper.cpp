@@ -1,22 +1,43 @@
-#include "test_string.h"
+#include "Test_CSString.h"
 
 void Test_CSString::ToUpper()
 {
     std::cout << "\tToUpper()\t\t";
 
-
     bool result = true;
+
+    c_sstring str0A;
+    c_sstring str0B;
+    c_sstring str1A;
+    c_sstring str1B;
+    c_sstring str2A;
+    c_sstring str2B;
+    c_sstring str3A;
+    c_sstring str3B;
+    c_sstring str4A;
+    c_sstring str4B;
+    c_sstring str5A;
+    c_sstring str5B;
+
+    c_sstring_constructor(&str0A);
+    c_sstring_constructor(&str0B);
+    c_sstring_constructor(&str1A);
+    c_sstring_constructor(&str1B);
+    c_sstring_constructor(&str2A);
+    c_sstring_constructor(&str2B);
+    c_sstring_constructor(&str3A);
+    c_sstring_constructor(&str3B);
+    c_sstring_constructor(&str4A);
+    c_sstring_constructor(&str4B);
+    c_sstring_constructor(&str5A);
+    c_sstring_constructor(&str5B);
 
     /*Check 0*/
     char arr0A[1] = { 'v' };
     char arr0B[128];
-    c_sstring str0A;
-    c_sstring_initaliaztion(&str0A);
-    c_sstring str0B;
-    c_sstring_initaliaztion(&str0B);
-    str0A.constructor(&str0A, arr0A, 1, 1);
+    str0A.setdata(&str0A, arr0A, 1, 1);
     str0A.to_upper_chararray(&str0A, arr0B);
-    str0B.constructor(&str0B, arr0B, 1, 128);
+    str0B.setdata(&str0B, arr0B, 1, 128);
     std::string data0{ 'V' };
     for (ushint index = 0; index < str0B.size(&str0B); ++index)
     {
@@ -36,13 +57,9 @@ void Test_CSString::ToUpper()
     /*Check 1*/
     char arr1A[128] = { "vahagngishyan" };
     char arr1B[128];
-    c_sstring str1A;
-    c_sstring_initaliaztion(&str1A);
-    c_sstring str1B;
-    c_sstring_initaliaztion(&str1B);
-    str1A.constructor(&str1A, arr1A, std::strlen(arr1A), 1);
+    str1A.setdata(&str1A, arr1A, std::strlen(arr1A), 1);
     str1A.to_upper_chararray(&str1A, arr1B);
-    str1B.constructor(&str1B, arr1B, std::strlen(arr1B), 128);
+    str1B.setdata(&str1B, arr1B, std::strlen(arr1B), 128);
     std::string data1{ "VAHAGNGISHYAN" };
     for (ushint index = 1; index < str1B.size(&str1B); ++index)
     {
@@ -62,13 +79,9 @@ void Test_CSString::ToUpper()
     /*Check 2*/
     char arr2A[228] = { "vahagn gishyan" };
     char arr2B[228];
-    c_sstring str2A;
-    c_sstring_initaliaztion(&str2A);
-    c_sstring str2B;
-    c_sstring_initaliaztion(&str2B);
-    str2A.constructor(&str2A, arr2A, std::strlen(arr2A), 2);
+    str2A.setdata(&str2A, arr2A, std::strlen(arr2A), 2);
     str2A.to_upper_chararray(&str2A, arr2B);
-    str2B.constructor(&str2B, arr2B, std::strlen(arr2B), 228);
+    str2B.setdata(&str2B, arr2B, std::strlen(arr2B), 228);
     std::string data2{ "VAHAGN GISHYAN" };
     for (ushint index = 2; index < str2B.size(&str2B); ++index)
     {
@@ -88,13 +101,9 @@ void Test_CSString::ToUpper()
     /*Check 3*/
     char arr3A[338] = { "Vahagn Gishyan" };
     char arr3B[338];
-    c_sstring str3A;
-    c_sstring_initaliaztion(&str3A);
-    c_sstring str3B;
-    c_sstring_initaliaztion(&str3B);
-    str3A.constructor(&str3A, arr3A, std::strlen(arr2A), 3);
+    str3A.setdata(&str3A, arr3A, std::strlen(arr2A), 3);
     str3A.to_upper_chararray(&str3A, arr3B);
-    str3B.constructor(&str3B, arr3B, std::strlen(arr2B), 338);
+    str3B.setdata(&str3B, arr3B, std::strlen(arr2B), 338);
     std::string data3{ "VAHAGN GISHYAN" };
     for (ushint index = 3; index < str3B.size(&str3B); ++index)
     {
@@ -114,13 +123,9 @@ void Test_CSString::ToUpper()
     /*Check 4*/
     char arr4A[448] = { "Vahagn Gishyan 456" };
     char arr4B[448];
-    c_sstring str4A;
-    c_sstring_initaliaztion(&str4A);
-    c_sstring str4B;
-    c_sstring_initaliaztion(&str4B);
-    str4A.constructor(&str4A, arr4A, std::strlen(arr4A), 125);
+    str4A.setdata(&str4A, arr4A, std::strlen(arr4A), 125);
     str4A.to_upper_chararray(&str4A, arr4B);
-    str4B.constructor(&str3B, arr4B, std::strlen(arr4B), 448);
+    str4B.setdata(&str3B, arr4B, std::strlen(arr4B), 448);
     std::string data4{ "VAHAGN GISHYAN 456" };
     for (ushint index = 4; index < str4B.size(&str3B); ++index)
     {
@@ -140,13 +145,9 @@ void Test_CSString::ToUpper()
     /*Check 5*/
     char arr5A[558] = { "Vahagn Gishyan 556 ^&*" };
     char arr5B[558];
-    c_sstring str5A;
-    c_sstring_initaliaztion(&str5A);
-    c_sstring str5B;
-    c_sstring_initaliaztion(&str5B);
-    str5A.constructor(&str5A, arr5A, std::strlen(arr5A), 125);
+    str5A.setdata(&str5A, arr5A, std::strlen(arr5A), 125);
     str5A.to_upper_chararray(&str5A, arr5B);
-    str5B.constructor(&str5B, arr5B, std::strlen(arr5B), 558);
+    str5B.setdata(&str5B, arr5B, std::strlen(arr5B), 558);
     std::string data5{ "VAHAGN GISHYAN 556 ^&*" };
     for (ushint index = 5; index < str5B.size(&str5B); ++index)
     {
@@ -163,18 +164,18 @@ void Test_CSString::ToUpper()
 	}
     }
 
-    str0A.destructor(&str0A);
-    str0B.destructor(&str0B);
-    str1A.destructor(&str1A);
-    str0B.destructor(&str1B);
-    str2A.destructor(&str2A);
-    str2B.destructor(&str2B);
-    str3A.destructor(&str3A);
-    str3B.destructor(&str3B);
-    str4A.destructor(&str4A);
-    str4B.destructor(&str4B);
-    str5A.destructor(&str5A);
-    str5B.destructor(&str5B);
+    c_sstring_destructor(&str0A);
+    c_sstring_destructor(&str0B);
+    c_sstring_destructor(&str1A);
+    c_sstring_destructor(&str1B);
+    c_sstring_destructor(&str2A);
+    c_sstring_destructor(&str2B);
+    c_sstring_destructor(&str3A);
+    c_sstring_destructor(&str3B);
+    c_sstring_destructor(&str4A);
+    c_sstring_destructor(&str4B);
+    c_sstring_destructor(&str5A);
+    c_sstring_destructor(&str5B);
 
     if (result)
 	std::cout << "TRUE" << std::endl;
