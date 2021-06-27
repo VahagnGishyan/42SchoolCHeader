@@ -3,7 +3,8 @@
 #include "../../header/cpp_header.h"
 
 #ifdef __cplusplus
-extern "C" {
+extern "C" 
+{
 #endif
 
 #include "../../header/42SchoolCHeader.h"

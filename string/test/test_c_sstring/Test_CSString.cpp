@@ -1,4 +1,4 @@
-#include "test_string.h"
+#include "Test_CSString.h"
 
 void Test_CSString::All()
 {
