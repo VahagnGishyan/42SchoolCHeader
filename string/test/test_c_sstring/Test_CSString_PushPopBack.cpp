@@ -1,4 +1,4 @@
-#include "test_string.h"
+#include "Test_CSString.h"
 
 void Test_CSString::PushPopBack()
 {
@@ -6,11 +6,16 @@ void Test_CSString::PushPopBack()
 
     bool result = true;
 
+
+    c_sstring str0;
+    c_sstring str1;
+
+    c_sstring_constructor(&str0);
+    c_sstring_constructor(&str1);
+
     /*Check 0*/
     char arr0[1]{ 'a' };
-    c_sstring str0;
-    c_sstring_initaliaztion(&str0);
-    str0.constructor(&str0, arr0, 1, 1);
+    str0.setdata(&str0, arr0, 1, 1);
     str0.pop_back(&str0);
     if (!str0.is_empty(&str0))
     {
@@ -25,9 +30,7 @@ void Test_CSString::PushPopBack()
 
     /*Check 1*/
     char arr1[128]{ "aaaaaaaaaaaaaaaaaaaaaaaaaaaaa" };
-    c_sstring str1;
-    c_sstring_initaliaztion(&str1);
-    str1.constructor(&str1, arr1, 25, 128);
+    str1.setdata(&str1, arr1, 25, 128);
     str1.push_back(&str1, 'b');
     if (*str1.back(&str1) != 'b')
     {
@@ -40,8 +43,8 @@ void Test_CSString::PushPopBack()
 	std::cout << "*str1.back()     = " << *str1.back(&str1) << "\t:: must be b" << std::endl;
     }
 
-    str0.destructor(&str0);
-    str1.destructor(&str1);
+    c_sstring_destructor(&str0);
+    c_sstring_destructor(&str1);
 
     if (result)
 	std::cout << "TRUE" << std::endl;
