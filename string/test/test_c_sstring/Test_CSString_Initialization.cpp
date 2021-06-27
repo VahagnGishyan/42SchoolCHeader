@@ -1,4 +1,4 @@
-#include "test_string.h"
+#include "Test_CSString.h"
 
 void Test_CSString::Initialization()
 {
@@ -6,11 +6,19 @@ void Test_CSString::Initialization()
 
     bool result = true;
 
+    c_sstring str0;
+    c_sstring str1;
+    c_sstring str2;
+    c_sstring str3;
+
+    c_sstring_constructor(&str0);
+    c_sstring_constructor(&str1);
+    c_sstring_constructor(&str2);
+    c_sstring_constructor(&str3);
+
     /*Check 0*/
     char arr0[1];
-    c_sstring str0;
-    c_sstring_initaliaztion(&str0);
-    str0.constructor(&str0,arr0, 0, 1);
+    str0.setdata(&str0,arr0, 0, 1);
     if (str0.size(&str0) != 0 || str0.capacity(&str0) != 1)
     {
 	result = false;
@@ -22,9 +30,7 @@ void Test_CSString::Initialization()
 
     /*Check 1*/
     char arr1[1]{ 'a' };
-    c_sstring str1;
-    c_sstring_initaliaztion(&str1);
-    str1.constructor(&str1, arr1, 0, 1);
+    str1.setdata(&str1, arr1, 0, 1);
     if (str1.size(&str1) != 0 || str1.capacity(&str1) != 1)
     {
 	if (result)
@@ -39,9 +45,7 @@ void Test_CSString::Initialization()
 
     /*Check 2*/
     char arr2[1]{ 'a' };
-    c_sstring str2;
-    c_sstring_initaliaztion(&str2);
-    str2.constructor(&str2, arr2, 1, 128);
+    str2.setdata(&str2, arr2, 1, 128);
     if (str2.size(&str2) != 1 || str2.capacity(&str2) != 128 || *str2.front(&str2) != 'a' || *str2.back(&str2) != 'a')
     {
 	if (result)
@@ -51,16 +55,14 @@ void Test_CSString::Initialization()
 	}
 	std::cout << "\tCheck 2\t" << std::endl;
 	std::cout << "\tstr.size() = " << str2.size(&str2) << "\t\t:: must be 1" << std::endl;
-	std::cout << "\tstr.capasity() = " << str2.capasity(&str2) << "\t:: must be 128" << std::endl;
+	std::cout << "\tstr.capasity() = " << str2.capacity(&str2) << "\t:: must be 128" << std::endl;
 	std::cout << "\t*str.front() = " << *str2.front(&str2) << "\t:: must be a" << std::endl;
 	std::cout << "\t*str.back() = " << *str2.back(&str2) << "\t\t:: must be a" << std::endl;
     }
 
     /*Check 3*/
     char arr3[128]{ "abcde" };
-    c_sstring str3;
-    c_sstring_initaliaztion(&str3);
-    str3.constructor(&str3, arr3, 5, 128);
+    str3.setdata(&str3, arr3, 5, 128);
     if (str3.size(&str3) != 5 || str3.capacity(&str3) != 128 || *str3.front(&str3) != 'a' || *str3.back(&str3) != 'e')
     {
 	if (result)
@@ -75,10 +77,10 @@ void Test_CSString::Initialization()
 	std::cout << "\t*str.back() = " << *str3.back(&str3) << "\t\t:: must be e" << std::endl;
     }
 
-    str0.destructor(&str0);
-    str1.destructor(&str1);
-    str2.destructor(&str2);
-    str3.destructor(&str3);
+    c_sstring_destructor(&str0);
+    c_sstring_destructor(&str1);
+    c_sstring_destructor(&str2);
+    c_sstring_destructor(&str3);
 
     if (result)
 	std::cout << "TRUE" << std::endl;
