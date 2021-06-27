@@ -1,4 +1,4 @@
-#include "test_string.h"
+#include "Test_CSString.h"
 
 void Test_CSString::Concatenation()
 {
@@ -6,12 +6,18 @@ void Test_CSString::Concatenation()
 
     bool result = true;
 
+    c_sstring str0;
+    c_sstring str1;
+    c_sstring str2;
+
+    c_sstring_constructor(&str0);
+    c_sstring_constructor(&str1);
+    c_sstring_constructor(&str2);
+
     /*Check 0*/
     char arr0A[128] = "Vahagn ";
     char arr0B[128] = "Gishyan";
-    c_sstring str0;
-    c_sstring_initaliaztion(&str0);
-    str0.constructor(&str0, arr0A, 7, 128);
+    str0.setdata(&str0, arr0A, 7, 128);
     str0.concatenation_chararray(&str0, arr0B, 7);
     std::string data0{ "Vahagn Gishyan" };
     for (ushint index = 0; index < 14; ++index)
@@ -32,9 +38,7 @@ void Test_CSString::Concatenation()
     /*Check 1*/
     char arr1A[128]{ 'V' };
     char arr1B[1]{ 'G' };
-    c_sstring str1;
-    c_sstring_initaliaztion(&str1);
-    str1.constructor(&str1, arr1A, 1, 128);
+    str1.setdata(&str1, arr1A, 1, 128);
     str1.concatenation_chararray(&str1, arr1B, 1);
     std::string data1{ "VG" };
     for (ushint index = 0; index < 2; ++index)
@@ -55,9 +59,7 @@ void Test_CSString::Concatenation()
     /*Check 2*/
     char arr2A[128] = "V";
     char arr2B[8]{ "GISHYAN" };
-    c_sstring str2;
-    c_sstring_initaliaztion(&str2);
-    str2.constructor(&str2, arr2A, 1, 128);
+    str2.setdata(&str2, arr2A, 1, 128);
     str2.concatenation_chararray(&str2, arr2B, 7);
     std::string data2{ "VGISHYAN" };
     for (ushint index = 0; index < 8; ++index)
@@ -75,9 +77,9 @@ void Test_CSString::Concatenation()
 	}
     }
 
-    str0.destructor(&str0);
-    str1.destructor(&str1);
-    str2.destructor(&str2);
+    c_sstring_destructor(&str0);
+    c_sstring_destructor(&str1);
+    c_sstring_destructor(&str2);
 
     if (result)
 	std::cout << "TRUE" << std::endl;
