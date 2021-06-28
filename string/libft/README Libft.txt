@@ -1,0 +1,1 @@
+The Libft library is private.
