@@ -112,6 +112,14 @@ void Test_CSString::ConvertToCharArray()
     c_sstring_destructor(&str1);
     c_sstring_destructor(&str2);
     c_sstring_destructor(&str3);
+    c_sstring_destructor(&str4A);
+    c_sstring_destructor(&str4B);
+    c_sstring_destructor(&str5A);
+    c_sstring_destructor(&str5B);
+    c_sstring_destructor(&str6A);
+    c_sstring_destructor(&str6B);
+    c_sstring_destructor(&str7A);
+    c_sstring_destructor(&str7B);
 
     if (result)
 	std::cout << "TRUE" << std::endl;

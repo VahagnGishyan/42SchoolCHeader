@@ -45,8 +45,8 @@ void Test_CSString::Initialization()
 
     /*Check 2*/
     char arr2[1]{ 'a' };
-    str2.setdata(&str2, arr2, 1, 128);
-    if (str2.size(&str2) != 1 || str2.capacity(&str2) != 128 || *str2.front(&str2) != 'a' || *str2.back(&str2) != 'a')
+    str2.setdata(&str2, arr2, 1, 1);
+    if (str2.size(&str2) != 1 || str2.capacity(&str2) != 1 || *str2.front(&str2) != 'a' || *str2.back(&str2) != 'a')
     {
 	if (result)
 	{
@@ -55,7 +55,7 @@ void Test_CSString::Initialization()
 	}
 	std::cout << "\tCheck 2\t" << std::endl;
 	std::cout << "\tstr.size() = " << str2.size(&str2) << "\t\t:: must be 1" << std::endl;
-	std::cout << "\tstr.capasity() = " << str2.capacity(&str2) << "\t:: must be 128" << std::endl;
+	std::cout << "\tstr.capasity() = " << str2.capacity(&str2) << "\t:: must be 1" << std::endl;
 	std::cout << "\t*str.front() = " << *str2.front(&str2) << "\t:: must be a" << std::endl;
 	std::cout << "\t*str.back() = " << *str2.back(&str2) << "\t\t:: must be a" << std::endl;
     }
