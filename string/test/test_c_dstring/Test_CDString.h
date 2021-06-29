@@ -1,7 +1,6 @@
 #pragma once
 
 #include "../../header/cpp_header.h"
-#include "../../c_dstring/c_dstring.h"
 
 #ifdef __cplusplus
 extern "C" 
