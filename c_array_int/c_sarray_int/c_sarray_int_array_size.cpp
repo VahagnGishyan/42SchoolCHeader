@@ -1,16 +1,16 @@
 #include "c_sarray_int.h"
 
-int c_sarray_int::size()
+int c_sarray_int::size(t_c_sarray_int* str)
 {
-    return (m_size);
+    return (str->m_size);
 }
 
-int c_sarray_int::capacity()
+int c_sarray_int::capacity(t_c_sarray_int* str)
 {
-    return (m_capacity);
+    return (str->m_capacity);
 }
 
-bool c_sarray_int::is_empty()
+bool c_sarray_int::is_empty(t_c_sarray_int* str)
 {
-    return (m_size == 0);
+    return (str->m_size == 0);
 }
