@@ -57,7 +57,7 @@ void Test_CSString::CopyData()
     str2B.copy_c_sstring(&str2B, &str2A);
     for (ushint index = 0; index < str2B.size(&str2B); ++index)
     {
-	if (*str2B.at(&str1, index) != 'a')
+	if (*str2B.at(&str2B, index) != 'a')
 	{
 	    if (result)
 	    {
