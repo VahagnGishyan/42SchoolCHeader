@@ -13,44 +13,56 @@ extern "C"
 }
 #endif
 
-class  c_sarray_int
+typedef struct c_sarray_int t_c_sarray_int;
+
+struct  c_sarray_int
 {
-private:
+public:
+
     int	    m_size;
     int	    m_capacity;
     int*    m_array;
 
-public:
-
     c_sarray_int();
     ~c_sarray_int();
 
-    void tie_static_array(int* arr, int capa);
-    void set_data(int* arr, int size, int capacity);
+    //Initialization
+    void tie_static_array(t_c_sarray_int* str, int* arr, int capa);
+    void set_data(t_c_sarray_int* str, int* arr, int size, int capacity);
 
-    bool resize(int length);
-    void clear();
+    //ResizeClear
+    bool resize(t_c_sarray_int* str, int length);
+    void clear(t_c_sarray_int* str);
 
-    int size();
-    int capacity();
-    bool is_empty();
+    //ArraySize
+    int size(t_c_sarray_int* str);
+    int capacity(t_c_sarray_int* str);
+    bool is_empty(t_c_sarray_int* str);
 
-    int* at(int index);
-    int* front();
-    int* back();
+    //IndexOperators
+    int* at(t_c_sarray_int* str, int index);
+    int* front(t_c_sarray_int* str);
+    int* back(t_c_sarray_int* str);
 
-    void push_back(int value);
-    void pop_back();
+    //PushPopBack
+    void push_back(t_c_sarray_int* str, int value);
+    void pop_back(t_c_sarray_int* str);
 
-    void copy_intarray(int* arr, int size);
-    void copy_c_sarray_int(c_sarray_int* arrint);
+    //CopyData
+    void copy_intarray(t_c_sarray_int* str, int* arr, int size);
+    void copy_c_sarray_int(t_c_sarray_int* str, t_c_sarray_int* arrint);
 
-    void concatenation_intarray(int* arr, int size);
-    void concatenation_c_sarray_int(c_sarray_int* arrint);
+    //Concatenation
+    void concatenation_intarray(t_c_sarray_int* str, int* arr, int size);
+    void concatenation_c_sarray_int(t_c_sarray_int* str, t_c_sarray_int* arrint);
 
-    int* search_number(int number);
-    int  search_number_index(int number);
+    //Search
+    int* search_number(t_c_sarray_int* str, int number);
+    int  search_number_index(t_c_sarray_int* str, int number);
 
-    void convert_to_intarray(int* arrint);
+    //ConvertToInt
+    void convert_to_intarray(t_c_sarray_int* str, int* arrint);
 };
 
+void c_sarray_int_constructor(t_c_sarray_int* str);
+void c_sarray_int_destructor(t_c_sarray_int* str);
