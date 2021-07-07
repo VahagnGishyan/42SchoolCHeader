@@ -67,7 +67,7 @@ void Test_CString::CopyData()
     strs2B.copy_c_string(&strs2B, &strs2A);
     for (ushint index = 0; index < strs2B.size(&strs2B); ++index)
     {
-	if (*strs2B.at(&strs1, index) != 'a')
+	if (*strs2B.at(&strs2B, index) != 'a')
 	{
 	    if (result)
 	    {
