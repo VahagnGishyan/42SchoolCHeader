@@ -9,12 +9,15 @@
 //  C is easy
 #include "c_is_easy.h"
 
-//  C main containers
+//  C string 
 #include "../c_string/c_sstring/c_sstring.h"
 #include "../c_string/c_dstring/c_dstring.h"
 #include "../c_string/c_string/c_string.h"
 
-
+//   C array int
+#include "../c_array_int/c_sarray_int/c_sarray_int.h"
+#include "../c_array_int/c_darray_int/c_darray_int.h"
+#include "../c_array_int/c_vector_int/c_vector_int.h"
 
 
 typedef unsigned short int ushint;
