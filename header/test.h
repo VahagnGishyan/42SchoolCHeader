@@ -11,3 +11,6 @@
 #include "../test/test_c_sarray_int/Test_CSArrayInt.h"
 #include "../test/test_c_darray_int/Test_CDArrayInt.h"
 #include "../test/test_c_vector_int/Test_CVectorInt.h"
+
+//  Test C array string
+#include "../test/test_c_sarray_string/Test_CSArrayString.h"
