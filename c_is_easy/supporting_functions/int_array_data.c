@@ -1,6 +1,6 @@
 #include "supporting_functions.h"
 
-void intarray_set_default_number(int* arr_main, int size, int number)
+void int_array_set_default_number(int* arr_main, int size, int number)
 {
     int index;
 
@@ -11,7 +11,7 @@ void intarray_set_default_number(int* arr_main, int size, int number)
 	arr_main[index] = number;
 }
 
-void intarray_copy_intarray(int* arr_main, int* arr_other, int size)
+void int_array_copy_int_array(int* arr_main, int* arr_other, int size)
 {
     int index;
 
