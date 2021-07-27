@@ -11,7 +11,7 @@ bool c_string_resize(t_c_string* str, int length)
     char* newstring;
     int size;
 
-    if (str->m_static_capacity >= length)
+    if (str->m_static_capacity >= length || length <= 0)
 	return true;
     newstring = NULL;
     if ((newstring = (char*)malloc((size_t)(length - str->m_static_capacity)*1.3)) == NULL)

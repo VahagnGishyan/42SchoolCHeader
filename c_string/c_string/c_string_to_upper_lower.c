@@ -10,7 +10,7 @@ void __c_string_constructor_to_upper_lower(t_c_string* str)
 
 void c_string_to_upper_chararray(t_c_string* str, char* arr)
 {
-    ushint index;
+    int index;
 
     index = -1;
     while (++index != str->m_size)
@@ -19,7 +19,7 @@ void c_string_to_upper_chararray(t_c_string* str, char* arr)
 }
 void c_string_to_upper_c_string(t_c_string* str_main, t_c_string* str_other)
 {
-    ushint index;
+    int index;
 
     index = -1;
     while (++index != str_main->m_size)
@@ -27,7 +27,7 @@ void c_string_to_upper_c_string(t_c_string* str_main, t_c_string* str_other)
 }
 void c_string_to_lower_chararray(t_c_string* str, char* arr)
 {
-    ushint index;
+    int index;
 
     index = -1;
     while (++index != str->m_size)
@@ -36,7 +36,7 @@ void c_string_to_lower_chararray(t_c_string* str, char* arr)
 }
 void c_string_to_lower_c_string(t_c_string* str_main, t_c_string* str_other)
 {
-    ushint index;
+    int index;
 
     index = -1;
     while (++index != str_main->m_size)

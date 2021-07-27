@@ -7,7 +7,7 @@ void __c_string_constructor_copy_data(t_c_string* str)
     str->copy_c_dstring = c_string_copy_c_dstring;
 }
 
-void c_string_copy_chararray(t_c_string* str, char* arr, int size)
+void c_string_copy_chararray(t_c_string* str, const char* arr, int size)
 {
     int index;
 

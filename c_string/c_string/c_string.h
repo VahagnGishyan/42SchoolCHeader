@@ -1,6 +1,8 @@
 #pragma once
 
-#include "../../header/42SchoolCHeader.h"
+#include "../../header/c_header.h"
+#include "../../libft/Libft.h"
+#include "../c_dstring/c_dstring.h"
 
 typedef struct c_string t_c_string;
 
@@ -11,8 +13,6 @@ struct c_string
     int                     m_static_capacity;
     char*                   m_dynamic_array;
     int                     m_dynamic_capacity;
-    //t_c_sstring		    m_static_array;
-    //t_c_dstring		    m_dynamic_array;
 
     void  (*tie_static_array)(t_c_string* str, char* arr, int length);
     void  (*setdata)(t_c_string* str, char* arr, int size, int length);
@@ -30,15 +30,15 @@ struct c_string
     void  (*push_back)(t_c_string* str, char symbol);
     void  (*pop_back)(t_c_string* str);
 
-    void  (*copy_chararray)(t_c_string* str, char* arr, int size);
+    void  (*copy_chararray)(t_c_string* str, const char* arr, int size);
     void  (*copy_c_string)(t_c_string* str_main, t_c_string* str_other);
     void  (*copy_c_dstring)(t_c_string* str_main, void* str_other);
 
     void  (*concatenation_chararray)(t_c_string* str, char* arr, int size);
     void  (*concatenation_c_string)(t_c_string* str_main, t_c_string* str_other);
 
-    int   (*compare_chararray)(t_c_string*, char* arr, int size);
-    int   (*compare_c_string)(t_c_string* str_main, t_c_string* str_other);
+    int   (*compare_chararray)(t_c_string*, const char* arr, int size);
+    int   (*compare_c_string)(t_c_string* str_main, const t_c_string* str_other);
 
     char* (*search_char)(t_c_string* str, char symbol);
     char* (*search_chararray)(t_c_string* str, char* arr, int size);
@@ -98,15 +98,15 @@ char* c_string_back(t_c_string* str);
 void  c_string_push_back(t_c_string* str, char symbol);
 void  c_string_pop_back(t_c_string* str);
 
-void  c_string_copy_chararray(t_c_string* str, char* arr, int size);
+void  c_string_copy_chararray(t_c_string* str, const char* arr, int size);
 void  c_string_copy_c_string(t_c_string* str_main, t_c_string* str_other);
 void  c_string_copy_c_dstring(t_c_string* str_main, void* str_other);
 
 void  c_string_concatenation_chararray(t_c_string* str, char* arr, int size);
 void  c_string_concatenation_c_string(t_c_string* str_main, t_c_string* str_other);
 
-int   c_string_compare_chararray(t_c_string* str, char* arr, int size);
-int   c_string_compare_c_string(t_c_string* str_main, t_c_string* str_other);
+int   c_string_compare_chararray(t_c_string* str, const char* arr, int size);
+int   c_string_compare_c_string(t_c_string* str_main, const t_c_string* str_other);
 
 char* c_string_search_char(t_c_string* str, char symbol);
 char* c_string_search_chararray(t_c_string* str, char* arr, int size);

@@ -6,7 +6,7 @@ void __c_string_constructor_compare_data(t_c_string* str)
     str->compare_c_string = c_string_compare_c_string;
 }
 
-int c_string_compare_chararray(t_c_string* str, char* arr, int size)
+int c_string_compare_chararray(t_c_string* str, const char* arr, int size)
 {
     int result;
     t_c_dstring d_str;
@@ -22,7 +22,7 @@ int c_string_compare_chararray(t_c_string* str, char* arr, int size)
     c_dstring_destructor(&d_str);
     return(result);
 }
-int c_string_compare_c_string(t_c_string* str_main, t_c_string* str_other)
+int c_string_compare_c_string(t_c_string* str_main, const t_c_string* str_other)
 {
     int result;
     t_c_dstring d_str_main;
@@ -34,7 +34,6 @@ int c_string_compare_c_string(t_c_string* str_main, t_c_string* str_other)
     c_string_convert_to_dstring(str_other, &d_str_other);
     result = d_str_main.compare_c_dstring(&d_str_main, &d_str_other);
     d_str_other.clear(&d_str_other);
-    c_string_copy_c_dstring(str_main, &d_str_main);
     c_dstring_destructor(&d_str_other);
     c_dstring_destructor(&d_str_main);
     return(result);
