@@ -1,5 +1,7 @@
 #pragma once
-#include "../../header/42SchoolCHeader.h"
+
+#include "../../header/c_header.h"
+#include "../../libft/Libft.h"
 
 typedef struct c_sstring t_c_sstring;
 

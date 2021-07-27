@@ -9,7 +9,7 @@ void c_sstring_constructor_concatenation(t_c_sstring* str)
 
 void c_sstring_concatenation_chararray(t_c_sstring* str, char* arr, int size)
 {
-    ushint index;
+    int index;
     if (size >= str->m_capacity)
 	return;
     index = 0;
@@ -21,8 +21,8 @@ void c_sstring_concatenation_chararray(t_c_sstring* str, char* arr, int size)
 }
 void c_sstring_concatenation_c_sstring(t_c_sstring* str1, t_c_sstring* str2)
 {
-    ushint index;
-    ushint size;
+    int index;
+    int size;
 
     size = str2->size(str2);
     index = 0;

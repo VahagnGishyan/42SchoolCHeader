@@ -10,7 +10,7 @@ void c_sstring_constructor_is_check(t_c_sstring* str)
 
 bool c_sstring_is_alpha(struct c_sstring* str)
 {
-    ushint index;
+    int index;
 
     index = 0;
     while (index != str->m_size)
@@ -23,7 +23,7 @@ bool c_sstring_is_alpha(struct c_sstring* str)
 }
 bool c_sstring_is_digit(struct c_sstring* str)
 {
-    ushint index;
+    int index;
 
     index = 0;
     while (index != str->m_size)
@@ -36,7 +36,7 @@ bool c_sstring_is_digit(struct c_sstring* str)
 }
 bool c_sstring_is_alnum(struct c_sstring* str)
 {
-    ushint index;
+    int index;
 
     index = 0;
     while (index != str->m_size)
@@ -49,7 +49,7 @@ bool c_sstring_is_alnum(struct c_sstring* str)
 }
 bool c_sstring_is_print(struct c_sstring* str)
 {
-    ushint index;
+    int index;
 
     index = 0;
     while (index != str->m_size)
