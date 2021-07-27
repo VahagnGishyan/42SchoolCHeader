@@ -8,7 +8,7 @@ void __c_dstring_constructor_concatenation(t_c_dstring* str)
 
 void c_dstring_concatenation_chararray(t_c_dstring* str, char* arr, int size)
 {
-    ushint index;
+    int index;
 
     if (str->m_capacity <= size + str->m_size)
 	str->resize(str, (int)((size + str->m_size) * 1.3));
@@ -21,7 +21,7 @@ void c_dstring_concatenation_chararray(t_c_dstring* str, char* arr, int size)
 }
 void c_dstring_concatenation_c_dstring(t_c_dstring* str_main, t_c_dstring* str_other)
 {
-    ushint index;
+    int index;
 
     if (str_main->m_capacity <= str_other->m_size + str_main->m_size)
 	str_main->resize(str_main, (int)((str_other->m_size + str_main->m_size) * 1.3));
