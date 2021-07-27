@@ -78,7 +78,7 @@ void Test_CVectorInt::ArraySize()
     int arrs3[128]{ 0, 1, 2, 3, 4 };
     strs3.copy_intarray(&strs3, arrs3, 5);
     strs3.clear(&strs3);
-    if (strs3.size(&strs3) != 0 || strs3.capacity(&strs3) > !0 || !strs3.is_empty(&strs3))
+    if (strs3.size(&strs3) != 0 || strs3.capacity(&strs3) >! 0 || !strs3.is_empty(&strs3))
     {
 	if (result)
 	{
