@@ -1,6 +1,5 @@
 #pragma once
-
-#include "../../header/42SchoolCHeader.h"
+#include "../../header/c_header.h"
 
 typedef struct c_sarray_int t_c_sarray_int;
 
