@@ -28,8 +28,8 @@ bool c_vector_int_resize(t_c_vector_int* str, int length)
     newlength = length * 1.3;
     if ((newarr = (int*)malloc(newlength * sizeof(int))) == NULL)
 	return NULL;
-    intarray_set_default_number(newarr, newlength, 0);
-    intarray_copy_intarray(newarr, str->m_dynamic_array, str->m_size - str->m_static_capacity);
+    int_array_set_default_number(newarr, newlength, 0);
+    int_array_copy_int_array(newarr, str->m_dynamic_array, str->m_size - str->m_static_capacity);
     size = str->m_size;
     c_vector_int_clear(str);
     str->m_dynamic_array = newarr;
