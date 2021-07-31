@@ -22,7 +22,7 @@ bool c_darray_int_resize(t_c_darray_int* str, int length)
     newlength = length * 1.3;
     if ((newarr = (int*)malloc(newlength * sizeof(int))) == NULL)
 	return NULL;
-    intarray_copy_intarray(newarr, str->m_array, str->m_size);
+    int_array_copy_int_array(newarr, str->m_array, str->m_size);
     size = str->m_size;
     c_darray_int_clear(str);
     str->m_array = newarr;
