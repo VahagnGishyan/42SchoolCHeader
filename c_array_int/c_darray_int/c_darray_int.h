@@ -1,6 +1,7 @@
 #pragma once
 
-#include "../../header/42SchoolCHeader.h"
+#include "../../header/c_header.h"
+#include "../../header/c_is_easy.h"
 
 typedef struct c_darray_int t_c_darray_int;
 
