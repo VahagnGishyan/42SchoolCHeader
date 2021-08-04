@@ -43,12 +43,11 @@ void Test_CSArrayInt::CopyData()
 
     /*Check 2*/
     int arrSorc2A[128]{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
-    int arrSorc2B[128];
     strs2A.set_data(&strs2A, arrSorc2A, 25, 228);
     strs2B.set_data(&strs2B, arrSorc2A, 0, 228);
     strs2B.copy_c_sarray_int(&strs2B, &strs2A);
     int number = 1;
-    for (ushint index = 0; index < strs2B.size(&strs2B); ++index)
+    for (int index = 0; index < strs2B.size(&strs2B); ++index)
     {
 	if (*strs2B.at(&strs2B, index) != number++)
 	{
@@ -101,7 +100,7 @@ void Test_CSArrayInt::CopyData()
  //   strd2A.copy_intarray(&strd2A, arrdSorc2A, std::strlen(arrdSorc2A));
  //   strd2B.copy_intarray(&strd2B, arrdSorc2A, 0);
  //   strd2B.copy_c_sarray_int(&strd2B, &strd2A);
- //   for (ushint index = 0; index < strd2B.size(&strd2B); ++index)
+ //   for (int index = 0; index < strd2B.size(&strd2B); ++index)
  //   {
 	//if (*strd2B.at(&strd1, index) != 'a')
 	//{
