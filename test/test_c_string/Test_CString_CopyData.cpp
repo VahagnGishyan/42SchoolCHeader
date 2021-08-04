@@ -65,7 +65,7 @@ void Test_CString::CopyData()
     strs2A.setdata(&strs2A, arrSorc2A, std::strlen(arrSorc2A), 228);
     strs2B.setdata(&strs2B, arrSorc2A, 0, 228);
     strs2B.copy_c_string(&strs2B, &strs2A);
-    for (ushint index = 0; index < strs2B.size(&strs2B); ++index)
+    for (int index = 0; index < strs2B.size(&strs2B); ++index)
     {
 	if (*strs2B.at(&strs2B, index) != 'a')
 	{
@@ -118,7 +118,7 @@ void Test_CString::CopyData()
     strd2A.copy_chararray(&strd2A, arrdSorc2A, std::strlen(arrdSorc2A));
     strd2B.copy_chararray(&strd2B, arrdSorc2A, 0);
     strd2B.copy_c_string(&strd2B, &strd2A);
-    for (ushint index = 0; index < strd2B.size(&strd2B); ++index)
+    for (int index = 0; index < strd2B.size(&strd2B); ++index)
     {
 	if (*strd2B.at(&strd1, index) != 'a')
 	{

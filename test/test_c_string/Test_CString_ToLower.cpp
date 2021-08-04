@@ -65,7 +65,7 @@ void Test_CString::ToLower()
     strs0A.to_lower_chararray(&strs0A, arr0B);
     strs0B.setdata(&strs0B, arr0B, 1, 128);
     std::string data0{ 'v' };
-    for (ushint index = 0; index < strs0B.size(&strs0B); ++index)
+    for (int index = 0; index < strs0B.size(&strs0B); ++index)
     {
 	if (*strs0B.at(&strs0B, index) != data0[index])
 	{
@@ -87,7 +87,7 @@ void Test_CString::ToLower()
     strs1A.to_lower_chararray(&strs1A, arr1B);
     strs1B.setdata(&strs1B, arr1B, std::strlen(arr1B), 128);
     std::string data1{ "vahagngishyan" };
-    for (ushint index = 1; index < strs1B.size(&strs1B); ++index)
+    for (int index = 1; index < strs1B.size(&strs1B); ++index)
     {
 	if (*strs1B.at(&strs1B, index) != data1[index])
 	{
@@ -109,7 +109,7 @@ void Test_CString::ToLower()
     strs2A.to_lower_chararray(&strs2A, arr2B);
     strs2B.setdata(&strs2B, arr2B, std::strlen(arr2B), 228);
     std::string data2{ "vahagn gishyan" };
-    for (ushint index = 2; index < strs2B.size(&strs2B); ++index)
+    for (int index = 2; index < strs2B.size(&strs2B); ++index)
     {
 	if (*strs2B.at(&strs2B, index) != data2[index])
 	{
@@ -131,7 +131,7 @@ void Test_CString::ToLower()
     strs3A.to_lower_chararray(&strs3A, arr3B);
     strs3B.setdata(&strs3B, arr3B, std::strlen(arr2B), 338);
     std::string data3{ "vahagn gishyan" };
-    for (ushint index = 3; index < strs3B.size(&strs3B); ++index)
+    for (int index = 3; index < strs3B.size(&strs3B); ++index)
     {
 	if (*strs3B.at(&strs3B, index) != data3[index])
 	{
@@ -153,7 +153,7 @@ void Test_CString::ToLower()
     strs4A.to_lower_chararray(&strs4A, arr4B);
     strs4B.setdata(&strs3B, arr4B, std::strlen(arr4B), 448);
     std::string data4{ "vahagn gishyan 456" };
-    for (ushint index = 4; index < strs4B.size(&strs3B); ++index)
+    for (int index = 4; index < strs4B.size(&strs3B); ++index)
     {
 	if (*strs4B.at(&strs3B, index) != data4[index])
 	{
@@ -175,7 +175,7 @@ void Test_CString::ToLower()
     strs5A.to_lower_chararray(&strs5A, arr5B);
     strs5B.setdata(&strs5B, arr5B, std::strlen(arr5B), 558);
     std::string data5{ "vahagn gishyan 556 ^&*" };
-    for (ushint index = 5; index < strs5B.size(&strs5B); ++index)
+    for (int index = 5; index < strs5B.size(&strs5B); ++index)
     {
 	if (*strs5B.at(&strs5B, index) != data5[index])
 	{
@@ -197,7 +197,7 @@ void Test_CString::ToLower()
     strd0A.to_lower_chararray(&strd0A, arrd0B);
     strd0B.copy_chararray(&strd0B, arrd0B, 1);
     std::string datad0{ 'v' };
-    for (ushint index = 0; index < strd0B.size(&strd0B); ++index)
+    for (int index = 0; index < strd0B.size(&strd0B); ++index)
     {
 	if (*strd0B.at(&strd0B, index) != datad0[index])
 	{
@@ -219,7 +219,7 @@ void Test_CString::ToLower()
     strd1A.to_lower_chararray(&strd1A, arrd1B);
     strd1B.copy_chararray(&strd1B, arrd1B, std::strlen(arr1B));
     std::string datad1{ "vahagngishyan" };
-    for (ushint index = 1; index < strd1B.size(&strd1B); ++index)
+    for (int index = 1; index < strd1B.size(&strd1B); ++index)
     {
 	if (*strd1B.at(&strd1B, index) != datad1[index])
 	{
@@ -241,7 +241,7 @@ void Test_CString::ToLower()
     strd2A.to_lower_chararray(&strd2A, arrd2B);
     strd2B.copy_chararray(&strd2B, arrd2B, std::strlen(arr2B));
     std::string datad2{ "vahagn gishyan" };
-    for (ushint index = 2; index < strd2B.size(&strd2B); ++index)
+    for (int index = 2; index < strd2B.size(&strd2B); ++index)
     {
 	if (*strd2B.at(&strd2B, index) != datad2[index])
 	{
@@ -263,7 +263,7 @@ void Test_CString::ToLower()
     strd3A.to_lower_chararray(&strd3A, arrd3B);
     strd3B.copy_chararray(&strd3B, arrd3B, std::strlen(arr2B));
     std::string datad3{ "vahagn gishyan" };
-    for (ushint index = 3; index < strd3B.size(&strd3B); ++index)
+    for (int index = 3; index < strd3B.size(&strd3B); ++index)
     {
 	if (*strd3B.at(&strd3B, index) != datad3[index])
 	{
@@ -285,7 +285,7 @@ void Test_CString::ToLower()
     strd4A.to_lower_chararray(&strd4A, arrd4B);
     strd4B.copy_chararray(&strd3B, arrd4B, std::strlen(arr4B));
     std::string datad4{ "vahagn gishyan 456" };
-    for (ushint index = 4; index < strd4B.size(&strd3B); ++index)
+    for (int index = 4; index < strd4B.size(&strd3B); ++index)
     {
 	if (*strd4B.at(&strd3B, index) != datad4[index])
 	{
@@ -307,7 +307,7 @@ void Test_CString::ToLower()
     strd5A.to_lower_chararray(&strd5A, arrd5B);
     strd5B.copy_chararray(&strd5B, arrd5B, std::strlen(arr5B));
     std::string datad5{ "vahagn gishyan 556 ^&*" };
-    for (ushint index = 5; index < strd5B.size(&strd5B); ++index)
+    for (int index = 5; index < strd5B.size(&strd5B); ++index)
     {
 	if (*strd5B.at(&strd5B, index) != datad5[index])
 	{

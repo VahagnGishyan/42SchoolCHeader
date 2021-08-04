@@ -61,7 +61,7 @@ void Test_CString::IndexOperators()
     /*Check 2*/
     char arrs2[128]{ "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" };
     strs2.setdata(&strs2, arrs2, 25, 128);
-    for (ushint index = 0; index < 25; ++index)
+    for (int index = 0; index < 25; ++index)
     {
 	if (*strs1.at(&strs2, index) != 'a')
 	{
@@ -138,7 +138,7 @@ void Test_CString::IndexOperators()
     /*Check 7*/
     char arrd2[128]{ "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" };
     str2.copy_chararray(&str2, arrd2, 25);
-    for (ushint index = 0; index < 25; ++index)
+    for (int index = 0; index < 25; ++index)
     {
 	if (*str1.at(&str2, index) != 'a')
 	{

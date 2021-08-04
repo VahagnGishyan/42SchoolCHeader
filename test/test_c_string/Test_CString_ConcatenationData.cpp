@@ -28,7 +28,7 @@ void Test_CString::Concatenation()
     strs0.setdata(&strs0, arrs0A, 7, 128);
     strs0.concatenation_chararray(&strs0, arrs0B, 7);
     std::string data0{ "Vahagn Gishyan" };
-    for (ushint index = 0; index < 14; ++index)
+    for (int index = 0; index < 14; ++index)
     {
 	if (*strs0.at(&strs0, index) != data0[index])
 	{
@@ -49,7 +49,7 @@ void Test_CString::Concatenation()
     strs1.setdata(&strs1, arrs1A, 1, 128);
     strs1.concatenation_chararray(&strs1, arrs1B, 1);
     std::string data1{ "VG" };
-    for (ushint index = 0; index < 2; ++index)
+    for (int index = 0; index < 2; ++index)
     {
 	if (*strs1.at(&strs1, index) != data1[index])
 	{
@@ -70,7 +70,7 @@ void Test_CString::Concatenation()
     strs2.setdata(&strs2, arrs2A, 1, 128);
     strs2.concatenation_chararray(&strs2, arrs2B, 7);
     std::string data2{ "VGISHYAN" };
-    for (ushint index = 0; index < 8; ++index)
+    for (int index = 0; index < 8; ++index)
     {
 	if (*strs2.at(&strs2, index) != data2[index])
 	{
@@ -91,7 +91,7 @@ void Test_CString::Concatenation()
     strd0.copy_chararray(&strd0, arrd0A, 7);
     strd0.concatenation_chararray(&strd0, arrd0B, 7);
     std::string data3{ "Vahagn Gishyan" };
-    for (ushint index = 0; index < 14; ++index)
+    for (int index = 0; index < 14; ++index)
     {
 	if (*strd0.at(&strd0, index) != data0[index])
 	{
@@ -112,7 +112,7 @@ void Test_CString::Concatenation()
     strd1.copy_chararray(&strd1, arrd1A, 1);
     strd1.concatenation_chararray(&strd1, arrd1B, 1);
     std::string data4{ "VG" };
-    for (ushint index = 0; index < 2; ++index)
+    for (int index = 0; index < 2; ++index)
     {
 	if (*strd1.at(&strd1, index) != data1[index])
 	{
@@ -133,7 +133,7 @@ void Test_CString::Concatenation()
     strd2.copy_chararray(&strd2, arrd2A, 1);
     strd2.concatenation_chararray(&strd2, arrd2B, 7);
     std::string data5{ "VGISHYAN" };
-    for (ushint index = 0; index < 8; ++index)
+    for (int index = 0; index < 8; ++index)
     {
 	if (*strd2.at(&strd2, index) != data2[index])
 	{

@@ -97,7 +97,7 @@ void Test_CString::ConvertToCharArray()
     char ptrs2[228];
     strs2.convert_to_chararray(&strs2, ptrs2);
     std::string datas2{ "51286" };
-    for (ushint index = 0; index < std::strlen(ptrs2); ++index)
+    for (int index = 0; index < std::strlen(ptrs2); ++index)
     {
 	if (ptrs2[index] != datas2[index])
 	{
@@ -119,7 +119,7 @@ void Test_CString::ConvertToCharArray()
     char ptrs3[338];
     strs3.convert_to_chararray(&strs3, ptrs3);
     std::string datas3{ "AAAAVVVAAA1386A" };
-    for (ushint index = 0; index < std::strlen(ptrs3); ++index)
+    for (int index = 0; index < std::strlen(ptrs3); ++index)
     {
 	if (ptrs3[index] != datas3[index])
 	{
@@ -173,7 +173,7 @@ void Test_CString::ConvertToCharArray()
     char ptrd2[228];
     strd2.convert_to_chararray(&strd2, ptrd2);
     std::string datadd2{ "51286" };
-    for (ushint index = 0; index < std::strlen(ptrd2); ++index)
+    for (int index = 0; index < std::strlen(ptrd2); ++index)
     {
 	if (ptrd2[index] != datadd2[index])
 	{
@@ -195,7 +195,7 @@ void Test_CString::ConvertToCharArray()
     char ptrd3[338];
     strd3.convert_to_chararray(&strd3, ptrd3);
     std::string datad3{ "AAAAVVVAAA1386A" };
-    for (ushint index = 0; index < std::strlen(ptrd3); ++index)
+    for (int index = 0; index < std::strlen(ptrd3); ++index)
     {
 	if (ptrd3[index] != datad3[index])
 	{
