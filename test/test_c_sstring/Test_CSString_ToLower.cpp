@@ -38,7 +38,7 @@ void Test_CSString::ToLower()
     str0A.to_lower_chararray(&str0A, arr0B);
     str0B.setdata(&str0B, arr0B, 1, 128);
     std::string data0{ 'v' };
-    for (ushint index = 0; index < str0B.size(&str0B); ++index)
+    for (int index = 0; index < str0B.size(&str0B); ++index)
     {
 	if (*str0B.at(&str0B, index) != data0[index])
 	{
@@ -60,7 +60,7 @@ void Test_CSString::ToLower()
     str1A.to_lower_chararray(&str1B, arr1B);
     str1B.setdata(&str1B, arr1B, std::strlen(arr1B), 128);
     std::string data1{ "vahagngishyan" };
-    for (ushint index = 1; index < str1B.size(&str1B); ++index)
+    for (int index = 1; index < str1B.size(&str1B); ++index)
     {
 	if (*str1B.at(&str1B, index) != data1[index])
 	{
@@ -82,7 +82,7 @@ void Test_CSString::ToLower()
     str2A.to_lower_chararray(&str2A, arr2B);
     str2B.setdata(&str2B, arr2B, std::strlen(arr2B), 228);
     std::string data2{ "vahagn gishyan" };
-    for (ushint index = 2; index < str2B.size(&str2B); ++index)
+    for (int index = 2; index < str2B.size(&str2B); ++index)
     {
 	if (*str2B.at(&str2B, index) != data2[index])
 	{
@@ -104,7 +104,7 @@ void Test_CSString::ToLower()
     str3A.to_lower_chararray(&str3A, arr3B);
     str3B.setdata(&str3B, arr3B, std::strlen(arr3B), 338);
     std::string data3{ "vahagn gishyan" };
-    for (ushint index = 3; index < str3B.size(&str3B); ++index)
+    for (int index = 3; index < str3B.size(&str3B); ++index)
     {
 	if (*str3B.at(&str3B, index) != data3[index])
 	{
@@ -126,7 +126,7 @@ void Test_CSString::ToLower()
     str4A.to_lower_chararray(&str4A, arr4B);
     str4B.setdata(&str4B, arr4B, std::strlen(arr4B), 448);
     std::string data4{ "vahagn gishyan 456" };
-    for (ushint index = 4; index < str4B.size(&str4B); ++index)
+    for (int index = 4; index < str4B.size(&str4B); ++index)
     {
 	if (*str4B.at(&str4B, index) != data4[index])
 	{
@@ -148,7 +148,7 @@ void Test_CSString::ToLower()
     str5A.to_lower_chararray(&str5A, arr5B);
     str5B.setdata(&str5B, arr5B, std::strlen(arr5B), 558);
     std::string data5{ "vahagn gishyan 556 ^&*" };
-    for (ushint index = 5; index < str5B.size(&str5B); ++index)
+    for (int index = 5; index < str5B.size(&str5B); ++index)
     {
 	if (*str5B.at(&str5B, index) != data5[index])
 	{

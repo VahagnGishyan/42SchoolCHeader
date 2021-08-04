@@ -50,7 +50,7 @@ void Test_CSString::IndexOperators()
     /*Check 2*/
     char arr2[128]{ "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" };
     str2.setdata(&str2, arr2, 25, 128);
-    for (ushint index = 0; index < 25; ++index)
+    for (int index = 0; index < 25; ++index)
     {
 	if (*str1.at(&str2, index) != 'a')
 	{
