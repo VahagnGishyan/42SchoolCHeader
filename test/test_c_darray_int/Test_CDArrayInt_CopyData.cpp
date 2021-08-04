@@ -48,7 +48,7 @@ void Test_CDArrayInt::CopyData()
     strs2B.copy_intarray(&strs2B, arrSorc2A, 0);
     strs2B.copy_c_darray_int(&strs2B, &strs2A);
     int number = 1;
-    for (ushint index = 0; index < strs2B.size(&strs2B); ++index)
+    for (int index = 0; index < strs2B.size(&strs2B); ++index)
     {
 	if (*strs2B.at(&strs2B, index) != number++)
 	{
@@ -101,7 +101,7 @@ void Test_CDArrayInt::CopyData()
  //   strd2A.copy_intarray(&strd2A, arrdSorc2A, std::strlen(arrdSorc2A));
  //   strd2B.copy_intarray(&strd2B, arrdSorc2A, 0);
  //   strd2B.copy_c_darray_int(&strd2B, &strd2A);
- //   for (ushint index = 0; index < strd2B.size(&strd2B); ++index)
+ //   for (int index = 0; index < strd2B.size(&strd2B); ++index)
  //   {
 	//if (*strd2B.at(&strd1, index) != 'a')
 	//{
