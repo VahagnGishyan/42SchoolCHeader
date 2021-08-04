@@ -71,7 +71,7 @@ void Test_CDString::ConvertToCharArray()
     char ptr2[228];
     str2.convert_to_chararray(&str2, ptr2);
     std::string data2{ "51286" };
-    for (ushint index = 0; index < std::strlen(ptr2); ++index)
+    for (int index = 0; index < std::strlen(ptr2); ++index)
     {
 	if (ptr2[index] != data2[index])
 	{
@@ -93,7 +93,7 @@ void Test_CDString::ConvertToCharArray()
     char ptr3[338];
     str3.convert_to_chararray(&str3, ptr3);
     std::string data3{ "AAAAVVVAAA1386A" };
-    for (ushint index = 0; index < std::strlen(ptr3); ++index)
+    for (int index = 0; index < std::strlen(ptr3); ++index)
     {
 	if (ptr3[index] != data3[index])
 	{

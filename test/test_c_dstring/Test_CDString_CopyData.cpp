@@ -55,7 +55,7 @@ void Test_CDString::CopyData()
     str2A.setdata(&str2A, arrSorc2A, std::strlen(arrSorc2A));
     str2B.setdata(&str2B, arrSorc2A, 0);
     str2B.copy_c_dstring(&str2B, &str2A);
-    for (ushint index = 0; index < str2B.size(&str2B); ++index)
+    for (int index = 0; index < str2B.size(&str2B); ++index)
     {
 	if (*str2B.at(&str2B, index) != 'a')
 	{

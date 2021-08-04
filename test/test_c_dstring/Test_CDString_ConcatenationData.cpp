@@ -20,7 +20,7 @@ void Test_CDString::Concatenation()
     str0.setdata(&str0, arr0A, 7);
     str0.concatenation_chararray(&str0, arr0B, 7);
     std::string data0{ "Vahagn Gishyan" };
-    for (ushint index = 0; index < 14; ++index)
+    for (int index = 0; index < 14; ++index)
     {
 	if (*str0.at(&str0, index) != data0[index])
 	{
@@ -41,7 +41,7 @@ void Test_CDString::Concatenation()
     str1.setdata(&str1, arr1A, 1);
     str1.concatenation_chararray(&str1, arr1B, 1);
     std::string data1{ "VG" };
-    for (ushint index = 0; index < 2; ++index)
+    for (int index = 0; index < 2; ++index)
     {
 	if (*str1.at(&str1, index) != data1[index])
 	{
@@ -62,7 +62,7 @@ void Test_CDString::Concatenation()
     str2.setdata(&str2, arr2A, 1);
     str2.concatenation_chararray(&str2, arr2B, 7);
     std::string data2{ "VGISHYAN" };
-    for (ushint index = 0; index < 8; ++index)
+    for (int index = 0; index < 8; ++index)
     {
 	if (*str2.at(&str2, index) != data2[index])
 	{
