@@ -79,7 +79,7 @@ void Test_CVectorInt::ConvertToIntArray()
     int ptrs2[228];
     strs2.convert_to_intarray(&strs2, ptrs2);
     std::array<int, 5> datas2{ 5, 1, 2, 8, 6 };
-    for (ushint index = 0; index < 5; ++index)
+    for (int index = 0; index < 5; ++index)
     {
 	if (ptrs2[index] != datas2[index])
 	{

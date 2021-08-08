@@ -6,7 +6,6 @@ void Test_CVectorInt::Initialization()
 
     bool result = true;
 
-
     c_vector_int strs0;
     c_vector_int strs1;
     c_vector_int strs2;
@@ -61,7 +60,7 @@ void Test_CVectorInt::Initialization()
     strs2.copy_intarray(&strs2, arrs2, 1);
     int symbol_front2 = *strs2.front(&strs2);
     int symbol_back2 = *strs2.back(&strs2);
-    if (strs2.size(&strs2) != 1 || strs2.capacity(&strs2) >! 0 || symbol_front2 != 4 || symbol_back2 != 4)
+    if (strs2.size(&strs2) != 1 || strs2.capacity(&strs2) <= 0 || symbol_front2 != 4 || symbol_back2 != 4)
     {
 	if (result)
 	{
@@ -191,10 +190,10 @@ void Test_CVectorInt::Initialization()
 //int arr[25];
 //str.tie_static_array(&str, arr, 25);
 //
-//for (ushint index = 0; index < 25; ++index)
+//for (int index = 0; index < 25; ++index)
 //    *str.at(&str, index) = index;
 //str.set_size(&str, 25);
-//for (ushint index = 0; index < 25; ++index)
+//for (int index = 0; index < 25; ++index)
 //    std::cout << *str.at(&str, index) << " ";
 //std::cout << std::endl;
 //
@@ -205,10 +204,10 @@ void Test_CVectorInt::Initialization()
 //std::cout << std::endl;
 //
 //str.resize(&str, 50);
-//for (ushint index = 25; index < 50; ++index)
+//for (int index = 25; index < 50; ++index)
 //    *str.at(&str, index) = index;
 //str.set_size(&str, 50);
-//for (ushint index = 25; index < 50; ++index)
+//for (int index = 25; index < 50; ++index)
 //    std::cout << *str.at(&str, index) << " ";
 //std::cout << std::endl;
 //

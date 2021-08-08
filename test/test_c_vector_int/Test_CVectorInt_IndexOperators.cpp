@@ -47,7 +47,7 @@ void Test_CVectorInt::IndexOperators()
     /*Check 2*/
     int arrs2[128]{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
     strs2.copy_intarray(&strs2, arrs2, 25);
-    for (ushint index = 0,  number = 1; index < 25; ++index)
+    for (int index = 0,  number = 1; index < 25; ++index)
     {
 	if (*strs1.at(&strs2, index) != number++)
 	{
@@ -124,7 +124,7 @@ void Test_CVectorInt::IndexOperators()
  //   /*Check 7*/
  //   int arrd2[128]{ "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" };
  //   str2.copy_intarray(&str2, arrd2, 25);
- //   for (ushint index = 0; index < 25; ++index)
+ //   for (int index = 0; index < 25; ++index)
  //   {
 	//if (*str1.at(&str2, index) != 'a')
 	//{
