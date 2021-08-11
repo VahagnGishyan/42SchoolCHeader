@@ -6,5 +6,5 @@ void  c_sarray_string::convert_to_string_array(t_c_sarray_string* data, t_c_stri
 
     index = -1;
     while (++index < data->size(data))
-	arrstring[index] = *data->at(data, index);
+	c_string_copy_c_string(arrstring + index,  data->at(data, index));
 }
