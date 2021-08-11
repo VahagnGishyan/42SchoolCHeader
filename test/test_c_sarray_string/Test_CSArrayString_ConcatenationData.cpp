@@ -6,44 +6,44 @@ void Test_CSArrayString::Concatenation()
 
     bool result = true;
 
-    t_c_sarray_string strs0;
-    t_c_sarray_string strs1;
-    t_c_sarray_string strs2A;
-    t_c_sarray_string strs2B;
-    t_c_sarray_string strs3A;
-    t_c_sarray_string strs3B;
+
+
+
+
 
     //t_c_sarray_string strd0;
     //t_c_sarray_string strd1;
     //t_c_sarray_string strd2;
 
-    c_sarray_string_constructor(&strs0);
-    c_sarray_string_constructor(&strs1);
-    c_sarray_string_constructor(&strs2A);
-    c_sarray_string_constructor(&strs2B);
-    c_sarray_string_constructor(&strs3A);
-    c_sarray_string_constructor(&strs3B);
+
 
     //t_c_sarray_string_constructor(&strd0);
     //t_c_sarray_string_constructor(&strd1);
     //t_c_sarray_string_constructor(&strd2);
+    std::cout << ""; // for screen heap
 
     /*Check 0*/
+    t_c_sarray_string strs0;
+    c_sarray_string_constructor(&strs0);
 
     constexpr int length0 = 16;
     c_string arrdest[length0];
     c_string_array_constructor(arrdest, length0);
     strs0.tie_static_array(&strs0, arrdest, length0);
 
-    std::string arrdst0[16];
-    strs0.tie_static_array(&strs0, arrdst0, 16);
+    constexpr int length1 = 4;
+    c_string arrsorc[length1];
+    c_string_array_constructor(arrsorc, length1);
+    c_string_copy_chararray(&arrsorc[0], "", 1);
+    c_string_copy_chararray(&arrsorc[1], "Vahagn", 6);
+    c_string_copy_chararray(&arrsorc[2], " ", 1);
+    c_string_copy_chararray(&arrsorc[3], "Gishyan", 7);
+    c_string_array_set_char_array(&arrsorc[4], length1 - 4, "", 1);
 
-    std::string arrsrc0[4]{ "", "Vahagn", " ", "Gishyan" };
-
-    strs0.concatenation_string_array(&strs0, arrsrc0, 4);
+    strs0.concatenation_string_array(&strs0, arrsorc, 4);
     for (int index = 0; index < 4; ++index)
     {
-	if (*strs0.at(&strs0, index) != arrsrc0[index])
+	if (c_string_compare_c_string(strs0.at(&strs0, index), arrsorc + index))
 	{
 	    if (result)
 	    {
@@ -51,20 +51,50 @@ void Test_CSArrayString::Concatenation()
 		result = false;
 	    }
 	    std::cout << "\tCheck 0\t" << std::endl;
-	    std::cout << "\t*strs0.at(" << index << ") = " << *strs0.at(&strs0, index) << "\t::must be "
-		<< arrsrc0[index] << std::endl;
+	    std::cout << "\tc_string_compare_c_string(strs0.at(&strs0, index), arrsorc + index) = " 
+		<< c_string_compare_c_string(strs0.at(&strs0, index), arrsorc + index) 
+		<< "\t::must be "<< 0 << std::endl;
 	}
     }
+    c_sarray_string_destructor(&strs0);
+
+    c_string_array_destructor(arrdest, length0);
+    c_string_array_destructor(arrsorc, length1);
+    std::cout << ""; // for screen heap
 
     /*Check 1*/
-    std::string arrdst1[16]{"Sime"};
-    std::string arrsrc1[4]{ "", "Vahagn", " ", "Gishyan" };
-    std::string arr1[]{ "Sime", "", "Vahagn", " ", "Gishyan" };
-    strs1.set_data(&strs1, arrdst1, 1, 16);
-    strs1.concatenation_string_array(&strs1, arrsrc1, 4);
+    t_c_sarray_string strs1;
+    c_sarray_string_constructor(&strs1);
+
+    constexpr int length2 = 16;
+    c_string arrdest1[length2];
+    c_string_array_constructor(arrdest1, length2);
+    c_string_copy_chararray(arrdest1, "Sime", 4);
+    strs1.set_data(&strs1, arrdest1, 1, length2);
+
+    constexpr int length3 = 4;
+    c_string arrsorc1[length3];
+    c_string_array_constructor(arrsorc1, length3);
+    c_string_copy_chararray(&arrsorc1[0], "", 1);
+    c_string_copy_chararray(&arrsorc1[1], "Vahagn", 6);
+    c_string_copy_chararray(&arrsorc1[2], " ", 1);
+    c_string_copy_chararray(&arrsorc1[3], "Gishyan", 7);
+    c_string_array_set_char_array(&arrsorc1[4], length3 - 4, "", 1);
+
+    constexpr int length4 = 5;
+    c_string arrsorc12[length4];
+    c_string_array_constructor(arrsorc12, length4);
+    c_string_copy_chararray(&arrsorc12[0], "Sime", 4);
+    c_string_copy_chararray(&arrsorc12[1], "", 1);
+    c_string_copy_chararray(&arrsorc12[2], "Vahagn", 6);
+    c_string_copy_chararray(&arrsorc12[3], " ", 1);
+    c_string_copy_chararray(&arrsorc12[4], "Gishyan", 7);
+    c_string_array_set_char_array(&arrsorc12[5], length4 - 5, "", 1);
+
+    strs1.concatenation_string_array(&strs1, arrsorc1, 4);
     for (int index = 0; index < 5; ++index)
     {
-	if (*strs1.at(&strs1, index) != arr1[index])
+	if (c_string_compare_c_string(strs1.at(&strs1, index), arrsorc12 + index))
 	{
 	    if (result)
 	    {
@@ -72,20 +102,46 @@ void Test_CSArrayString::Concatenation()
 		result = false;
 	    }
 	    std::cout << "\tCheck 1\t" << std::endl;
-	    std::cout << "\t*strs1.at(" << index << ") = " << *strs1.at(&strs1, index) << "\t:: must be "
-		<< arr1[index] << std::endl;
+	    std::cout << "\tc_string_compare_c_string(strs1.at(&strs1, index), arrsorc12 + index) = " 
+		<< c_string_compare_c_string(strs1.at(&strs1, index), arrsorc12 + index) 
+		<< "\t:: must be "<< 0 << std::endl;
 	}
     }
 
+    c_sarray_string_destructor(&strs1);
+    c_string_array_destructor(arrdest1, length2);
+    c_string_array_destructor(arrsorc1, length3);
+    c_string_array_destructor(arrsorc12, length4);
+    std::cout << ""; // for screen heap
+
     /*Check 2*/
-    std::string arrdst2A[16];
-    std::string arrdst2B[4]{ "", "Vahagn", " ", "Gishyan" };
-    strs2A.tie_static_array(&strs2A, arrdst2A, 16);
-    strs2B.set_data(&strs2B, arrdst2A, 4, 4);
+
+    t_c_sarray_string strs2A;
+    t_c_sarray_string strs2B;
+    c_sarray_string_constructor(&strs2A);
+    c_sarray_string_constructor(&strs2B);
+
+    //std::string arrdst2A[16];
+    constexpr int length5 = 16;
+    c_string arrdest2[length5];
+    c_string_array_constructor(arrdest2, length5);
+
+    constexpr int length6 = 4;
+    c_string arrdst2B[length6];
+    c_string_array_constructor(arrdst2B, length6);
+    c_string_copy_chararray(&arrdst2B[0], "", 1);
+    c_string_copy_chararray(&arrdst2B[1], "Vahagn", 6);
+    c_string_copy_chararray(&arrdst2B[2], " ", 1);
+    c_string_copy_chararray(&arrdst2B[3], "Gishyan", 7);
+    c_string_array_set_char_array(&arrdst2B[4], length6 - 4, "", 1);
+
+    strs2A.tie_static_array(&strs2A, arrdest2, length5);
+    strs2B.set_data(&strs2B, arrdst2B, length6, 4);
     strs2A.concatenation_c_sarray_string(&strs2A, &strs2B);
+
     for (int index = 0; index < 4; ++index)
     {
-	if (*strs2A.at(&strs2A, index) != *strs2B.at(&strs2B, index))
+	if (c_string_compare_c_string(strs2A.at(&strs2A, index), strs2B.at(&strs2B, index)))
 	{
 	    if (result)
 	    {
@@ -93,20 +149,49 @@ void Test_CSArrayString::Concatenation()
 		result = false;
 	    }
 	    std::cout << "\tCheck 2\t" << std::endl;
-	    std::cout << "\t*strs2.at(" << index << ") = " << *strs2A.at(&strs2A, index) << "\t:: must be "
-		<< *strs2B.at(&strs2B, index) << std::endl;
+	    std::cout << "\tc_string_compare_c_string(strs2A.at(&strs2A, index), strs2B.at(&strs2B, index)) = "
+		<< c_string_compare_c_string(strs2A.at(&strs2A, index), strs2B.at(&strs2B, index))
+		<< "\t:: must be " << 0 << std::endl;
 	}
     }
 
+    c_sarray_string_destructor(&strs2A);
+    c_sarray_string_destructor(&strs2B);
+    c_string_array_destructor(arrdest2, length5);
+    c_string_array_destructor(arrdst2B, length6);
+    std::cout << ""; // for screen heap
+
+
     /*Check 3*/
-    std::string arrdst3A[16]{ "", "Vahagn", };
-    std::string arrdst3B[4]{ " ", "Gishyan" };
-    strs3A.set_data(&strs3A, arrdst3A, 16, 2);
-    strs3B.set_data(&strs3B, arrdst3A, 2, 2);
+
+    t_c_sarray_string strs3A;
+    t_c_sarray_string strs3B;
+    c_sarray_string_constructor(&strs3A);
+    c_sarray_string_constructor(&strs3B);
+
+    //std::string arrdst3A[16]{ "", "Vahagn", };
+    constexpr int length7 = 16;
+    c_string arrdst3A[length7];
+    c_string_array_constructor(arrdst3A, length7);
+    c_string_copy_chararray(&arrdst3A[0], "", 1);
+    c_string_copy_chararray(&arrdst3A[1], "Vahagn", 6);
+    c_string_array_set_char_array(&arrdst3A[2], length7 - 2, "", 1);
+
+    //std::string arrdst3B[4]{ " ", "Gishyan" };
+    constexpr int length8 = 4;
+    c_string arrdst3B[length8];
+    c_string_array_constructor(arrdst3B, length8);
+    c_string_copy_chararray(&arrdst3B[0], " ", 1);
+    c_string_copy_chararray(&arrdst3B[1], "Gishyan", 7);
+    c_string_array_set_char_array(&arrdst3B[2], length8 - 2, "", 1);
+
+    strs3A.set_data(&strs3A, arrdst3A, length7, 2);
+    strs3B.set_data(&strs3B, arrdst3A, length8, 2);
+
     strs3A.concatenation_c_sarray_string(&strs3A, &strs3B);
     for (int index = 0; index < 4; ++index)
     {
-	if (*strs3A.at(&strs3A, index) != *strs3B.at(&strs3B, index))
+	if (c_string_compare_c_string(strs3A.at(&strs3A, index), strs3B.at(&strs3B, index)))
 	{
 	    if (result)
 	    {
@@ -114,10 +199,17 @@ void Test_CSArrayString::Concatenation()
 		result = false;
 	    }
 	    std::cout << "\tCheck 3\t" << std::endl;
-	    std::cout << "\t*strs3.at(" << index << ") = " << *strs3A.at(&strs3A, index) << "\t:: must be "
-		<< *strs3B.at(&strs3B, index) << std::endl;
+	    std::cout << "\tc_string_compare_c_string(strs3A.at(index), strs3B.at(index)) = " 
+		<< c_string_compare_c_string(strs3A.at(&strs3A, index), strs3B.at(&strs3B, index)) 
+		<< "\t:: must be "<< 0 << std::endl;
 	}
     }
+
+    c_sarray_string_destructor(&strs3A);
+    c_sarray_string_destructor(&strs3B);
+    c_string_array_destructor(arrdst3A, length7);
+    c_string_array_destructor(arrdst3B, length8);
+    std::cout << ""; // for screen heap
 
  //   /*Check 3*/
  //   int arrd0A[128] = "Vahagn ";
@@ -182,12 +274,10 @@ void Test_CSArrayString::Concatenation()
 	//}
  //   }
 
-    c_sarray_string_destructor(&strs0);
-    c_sarray_string_destructor(&strs1);
-    c_sarray_string_destructor(&strs2A);
-    c_sarray_string_destructor(&strs2B);
-    c_sarray_string_destructor(&strs3A);
-    c_sarray_string_destructor(&strs3B);
+
+
+
+
 
     //t_c_sarray_string_destructor(&strd0);
     //t_c_sarray_string_destructor(&strd1);
