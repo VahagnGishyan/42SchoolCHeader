@@ -33,7 +33,7 @@ void Test_CSArrayString::CopyData()
     constexpr int length3 = 4;
     c_string arr0[length3];
     c_string_array_constructor(arr0, length3);
-    c_string_copy_chararray(&arr0[0], "", 0);
+    c_string_copy_chararray(&arr0[0], "", 1);
     c_string_copy_chararray(&arr0[1], "Vahagn", 6);
     c_string_copy_chararray(&arr0[2], " ", 1);
     c_string_copy_chararray(&arr0[3], "Gishyan", 7);
@@ -59,7 +59,7 @@ void Test_CSArrayString::CopyData()
     constexpr int length4 = 2;
     c_string arr1[length4];
     c_string_array_constructor(arr1, length4);
-    c_string_copy_chararray(&arr1[0], "", 0);
+    c_string_copy_chararray(&arr1[0], "", 1);
     c_string_copy_chararray(&arr1[1], "Vahagn", 6);
 
     c_string arr2[length4];
@@ -74,7 +74,7 @@ void Test_CSArrayString::CopyData()
     constexpr int length5 = 4;
     c_string arrsorc[length5];
     c_string_array_constructor(arrsorc, length5);
-    c_string_copy_chararray(&arrsorc[0], "", 0);
+    c_string_copy_chararray(&arrsorc[0], "", 1);
     c_string_copy_chararray(&arrsorc[1], "Vahagn", 6);
     c_string_copy_chararray(&arrsorc[2], " ", 1);
     c_string_copy_chararray(&arrsorc[3], "Gishyan", 7);
