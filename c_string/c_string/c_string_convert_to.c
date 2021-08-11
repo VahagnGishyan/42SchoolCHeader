@@ -52,6 +52,8 @@ void  c_string_convert_to_dstring(t_c_string* str_main, void* str_other_ptr)
     t_c_dstring* str_other;
     
     str_other = str_other_ptr;
+    if (!str_main || !str_other_ptr)
+	return;
     if (!str_main->m_size)
 	return;
     if (!str_other->resize(str_other, str_main->m_size))
