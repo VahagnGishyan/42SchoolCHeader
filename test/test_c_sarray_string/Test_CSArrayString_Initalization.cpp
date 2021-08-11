@@ -15,7 +15,7 @@ void Test_CSArrayString::Initialization()
 
     c_string arrsorc[32];
     c_string_array_constructor(arrsorc, 32);
-    c_string_copy_chararray(&arrsorc[0], "", 0);
+    c_string_copy_chararray(&arrsorc[0], "", 1);
     c_string_copy_chararray(&arrsorc[1], "Vahagn", 6);
     c_string_copy_chararray(&arrsorc[2], " ", 1);
     c_string_copy_chararray(&arrsorc[3], "Gishyan", 7);
@@ -36,7 +36,7 @@ void Test_CSArrayString::Initialization()
     }
 
     /*Check 1*/
-    if (strs0.at(&strs0, 0)->size(strs0.at(&strs0, 0)) != 0)
+    if (strs0.at(&strs0, 0)->size(strs0.at(&strs0, 0)) != 1)
     {
 	if (result)
 	{
@@ -44,7 +44,7 @@ void Test_CSArrayString::Initialization()
 	    result = false;
 	}
 	std::cout << "\tCheck 1\t" << std::endl;
-	std::cout << "\tstr.size() = " << strs0.at(&strs0, 0)->size(strs0.at(&strs0, 0)) << "\t\t:: must be 0" << std::endl;
+	std::cout << "\tstr.size() = " << strs0.at(&strs0, 0)->size(strs0.at(&strs0, 0)) << "\t\t:: must be 1" << std::endl;
     }
 
     /*Check 2*/
