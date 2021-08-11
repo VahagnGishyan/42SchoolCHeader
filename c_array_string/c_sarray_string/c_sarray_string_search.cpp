@@ -6,7 +6,7 @@ t_c_string* c_sarray_string::search_string(t_c_sarray_string* data, t_c_string* 
 
     index = -1;
     while (++index < data->size(data))
-	if (c_string_compare_c_string(m_data, obj))
+	if (!c_string_compare_c_string(data->at(data, index), obj))
 	    return (data->at(data, index));
     return (NULL);
 }
@@ -17,7 +17,7 @@ int   c_sarray_string::search_string_index(t_c_sarray_string* data, t_c_string* 
 
     index = -1;
     while (++index < data->size(data))
-	if (c_string_compare_c_string(m_data, obj))
+	if (!c_string_compare_c_string(data->at(data, index), obj))
 	    return (index);
     return (NULL);
 }
