@@ -10,7 +10,7 @@ void Test_CSArrayString::All()
     PushPopBack();
     CopyData();
     Concatenation();
-    //Search();
-    //ConvertToIntArray();
+    Search();
+    ConvertToIntArray();
 }
 
