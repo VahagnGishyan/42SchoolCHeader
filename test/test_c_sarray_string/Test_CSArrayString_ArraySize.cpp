@@ -12,7 +12,7 @@ void Test_CSArrayString::ArraySize()
     constexpr int length = 8;
     c_string arrsorc[length];
     c_string_array_constructor(arrsorc, length);
-    c_string_copy_chararray(&arrsorc[0], "", 0);
+    c_string_copy_chararray(&arrsorc[0], "", 1);
     c_string_copy_chararray(&arrsorc[1], "Vahagn", 6);
     c_string_copy_chararray(&arrsorc[2], " ", 1);
     c_string_copy_chararray(&arrsorc[3], "Gishyan", 7);
