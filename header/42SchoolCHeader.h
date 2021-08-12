@@ -19,6 +19,10 @@
 #include "../c_array_int/c_darray_int/c_darray_int.h"
 #include "../c_array_int/c_vector_int/c_vector_int.h"
 
+//   C array string
+//#include "../c_array_string/c_sarray_string/c_sarray_string.h"
+//#include "../c_array_string/c_darray_string/c_darray_string.h"
+
 typedef unsigned short int ushint;
 typedef unsigned short int ushort;
 
