@@ -1,6 +1,6 @@
 #include "c_sarray_string.h"
 
-void c_sarray_string::push_back(t_c_sarray_string* obj, c_string* value)
+void c_sarray_string::push_back(t_c_sarray_string* obj, t_c_string* value)
 {
     if (!obj->resize(obj, obj->m_size + 1))
 	return;
