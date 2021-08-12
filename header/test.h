@@ -14,3 +14,5 @@
 
 //  Test C array string
 #include "../test/test_c_sarray_string/Test_CSArrayString.h"
+#include "../test/test_c_darray_string/Test_CDArrayString.h"
+#include "../test/test_c_vector_string/Test_CVectorString.h"
