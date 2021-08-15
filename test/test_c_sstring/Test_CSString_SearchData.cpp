@@ -77,7 +77,7 @@ void Test_CSString::Search()
     char arr3[128] = { "VAHAGN" };
     char symbol3 = { 'P' };
     str3.setdata(&str3, arr3, 3, 128);
-    if (str3.search_char(&str3, symbol3) != nullptr)
+    if (str3.search_char(&str3, symbol3) != NULL)
     {
 	if (result)
 	{
@@ -85,8 +85,8 @@ void Test_CSString::Search()
 	    result = false;
 	}
 	std::cout << "\tCheck 3\t" << std::endl;
-	std::cout << "\t(str.search_char(symbol)  = " << str3.search_char(&str3, symbol3) <<
-	    "\t:: must be 'V" << std::endl;
+	std::cout << "\tstr.search_char(symbol)  = " << str3.search_char(&str3, symbol3) <<
+	    "\t:: must be null" << std::endl;
     }
 
     /*Check 4*/
