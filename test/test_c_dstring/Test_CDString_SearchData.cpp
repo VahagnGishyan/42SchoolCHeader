@@ -37,7 +37,7 @@ void Test_CDString::Search()
 	    result = false;
 	}
 	std::cout << "\tCheck 0\t" << std::endl;
-	std::cout << "\t(str.search_char(symbol)  = " << str0.search_char(&str0, symbol0) <<
+	std::cout << "\t(str.search_char(symbol)  = " << *str0.search_char(&str0, symbol0) <<
 	    "\t:: must be 'V" << std::endl;
     }
 
@@ -53,7 +53,7 @@ void Test_CDString::Search()
 	    result = false;
 	}
 	std::cout << "\tCheck 1\t" << std::endl;
-	std::cout << "\t(str.search_char(symbol)  = " << str1.search_char(&str0, symbol1) <<
+	std::cout << "\t(str.search_char(symbol)  = " << *str1.search_char(&str0, symbol1) <<
 	    "\t:: must be 'V" << std::endl;
     }
 
@@ -69,7 +69,7 @@ void Test_CDString::Search()
 	    result = false;
 	}
 	std::cout << "\tCheck 2\t" << std::endl;
-	std::cout << "\t(str.search_char(symbol)  = " << str2.search_char(&str2, symbol2) <<
+	std::cout << "\t(str.search_char(symbol)  = " << *str2.search_char(&str2, symbol2) <<
 	    "\t:: must be 'V" << std::endl;
     }
 
@@ -85,7 +85,7 @@ void Test_CDString::Search()
 	    result = false;
 	}
 	std::cout << "\tCheck 3\t" << std::endl;
-	std::cout << "\t(str.search_char(symbol)  = " << str3.search_char(&str3, symbol3) <<
+	std::cout << "\t(str.search_char(symbol)  = " << *str3.search_char(&str3, symbol3) <<
 	    "\t:: must be 'V" << std::endl;
     }
 
@@ -101,7 +101,7 @@ void Test_CDString::Search()
 	    result = false;
 	}
 	std::cout << "\tCheck 4\t" << std::endl;
-	std::cout << "\t(str.search_char(symbol)  = " << str4.search_chararray(&str4, arr4B, ft_strlen(arr4B)) <<
+	std::cout << "\t(str.search_char(symbol)  = " << *str4.search_chararray(&str4, arr4B, ft_strlen(arr4B)) <<
 	    "\t:: must be 'V" << std::endl;
     }
 
@@ -117,8 +117,8 @@ void Test_CDString::Search()
 	    result = false;
 	}
 	std::cout << "\tCheck 5\t" << std::endl;
-	std::cout << "\t(str.search_char(symbol)  = " << str5.search_chararray(&str5, arr5B, ft_strlen(arr5B)) <<
-	    "\t:: must be 'V" << std::endl;
+	std::cout << "\t(str.search_char(symbol)  = " << *str5.search_chararray(&str5, arr5B, ft_strlen(arr5B)) <<
+	    "\t:: must be 'A" << std::endl;
     }
 
     /*Check 6*/
@@ -134,7 +134,7 @@ void Test_CDString::Search()
 	}
 	std::cout << "\tCheck 6\t" << std::endl;
 	std::cout << "\t(str.search_char(symbol)  = " << str6.search_chararray(&str6, arr6B, ft_strlen(arr6B)) <<
-	    "\t:: must be 'V" << std::endl;
+	    "\t:: must be NULL" << std::endl;
     }
 
     /*Check 7*/
