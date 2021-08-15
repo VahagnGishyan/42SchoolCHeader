@@ -6,11 +6,6 @@ void Test_CSArrayString::Concatenation()
 
     bool result = true;
 
-
-
-
-
-
     //t_c_sarray_string strd0;
     //t_c_sarray_string strd1;
     //t_c_sarray_string strd2;
@@ -185,13 +180,22 @@ void Test_CSArrayString::Concatenation()
     c_string_copy_chararray(&arrdst3B[1], "Gishyan", 7);
     c_string_array_set_char_array(&arrdst3B[2], length8 - 2, "", 1);
 
-    strs3A.set_data(&strs3A, arrdst3A, length7, 2);
-    strs3B.set_data(&strs3B, arrdst3A, length8, 2);
+    strs3A.set_data(&strs3A, arrdst3A, 2, length7);
+    strs3B.set_data(&strs3B, arrdst3B, 2, length8);
+
+    constexpr int length9 = 4;
+    c_string arrdst3[length9];
+    c_string_array_constructor(arrdst3, length9);
+    c_string_copy_chararray(&arrdst3[0], "", 1);
+    c_string_copy_chararray(&arrdst3[1], "Vahagn", 6);
+    c_string_copy_chararray(&arrdst3[2], " ", 1);
+    c_string_copy_chararray(&arrdst3[3], "Gishyan", 7);
+    c_string_array_set_char_array(&arrdst3[4], length9 - 4, "", 1);
 
     strs3A.concatenation_c_sarray_string(&strs3A, &strs3B);
     for (int index = 0; index < 4; ++index)
     {
-	if (c_string_compare_c_string(strs3A.at(&strs3A, index), strs3B.at(&strs3B, index)))
+	if (c_string_compare_c_string(strs3A.at(&strs3A, index), arrdst3 +  index))
 	{
 	    if (result)
 	    {
@@ -199,8 +203,8 @@ void Test_CSArrayString::Concatenation()
 		result = false;
 	    }
 	    std::cout << "\tCheck 3\t" << std::endl;
-	    std::cout << "\tc_string_compare_c_string(strs3A.at(index), strs3B.at(index)) = " 
-		<< c_string_compare_c_string(strs3A.at(&strs3A, index), strs3B.at(&strs3B, index)) 
+	    std::cout << "\tc_string_compare_c_string(strs3A.at(" << index << "), arrdst3 +  index = " 
+		<< c_string_compare_c_string(strs3A.at(&strs3A, index), arrdst3 + index)
 		<< "\t:: must be "<< 0 << std::endl;
 	}
     }
@@ -209,6 +213,7 @@ void Test_CSArrayString::Concatenation()
     c_sarray_string_destructor(&strs3B);
     c_string_array_destructor(arrdst3A, length7);
     c_string_array_destructor(arrdst3B, length8);
+    c_string_array_destructor(arrdst3, length9);
     std::cout << ""; // for screen heap
 
  //   /*Check 3*/
