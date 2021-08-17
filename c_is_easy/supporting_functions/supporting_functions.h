@@ -16,6 +16,7 @@ bool	int_is_zero(int value);
 void int_array_set_default_number(int* arr_main, int size, int number);
 void int_array_copy_int_array(int* arr_main, int* arr_other, int size);
 
+/*42 Shcool C Header types*/
 
 /*c string array*/
 /*c string array constructor.c*/
