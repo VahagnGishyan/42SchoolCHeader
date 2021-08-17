@@ -20,7 +20,9 @@ void  c_string_tie_static_array(t_c_string* str, char* arr, int length)
 {
     int index;
 
-    str->setdata(&str->m_static_array, arr, 0, length);
+    str->setdata(str, arr, 0, length);
+
+
     if (str->is_dynamic_memory_null(str))
     {
 	return;
@@ -32,7 +34,8 @@ void  c_string_tie_static_array(t_c_string* str, char* arr, int length)
     }
     if (length >= str->m_size)
     {
-	free(str->m_dynamic_array);
+	if (str->m_dynamic_array != NULL)
+	    free(str->m_dynamic_array);
 	return;
     }
     index - 1;
