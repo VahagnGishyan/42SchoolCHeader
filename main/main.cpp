@@ -2,6 +2,19 @@
 #include "../header/test.h"
 #include "../header/cpp_header.h"
 
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+#include "../c_file/c_file/c_file.h"
+
+#ifdef __cplusplus
+}
+#endif
+
+
+
 int main()
 {
 
@@ -17,7 +30,7 @@ int main()
     //Test_CSArrayString::All();
     //Test_CDArrayString::All();
     //Test_CVectorString::All();
-    std::cout << ""; //for screen heap
+    //Test_CFile::All();
 
     std::cout << "Exit main()\n";  //for screen heap
     return 0;
@@ -25,6 +38,6 @@ int main()
 
 /*
 
-TODO: c_array_string => c_vector_string
+TODO: 
 
 */
