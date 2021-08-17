@@ -16,3 +16,6 @@
 #include "../test/test_c_sarray_string/Test_CSArrayString.h"
 #include "../test/test_c_darray_string/Test_CDArrayString.h"
 #include "../test/test_c_vector_string/Test_CVectorString.h"
+
+//  Test C file
+#include "../test/test_c_file/Test_CFile.h"
