@@ -14,7 +14,7 @@ The 42 School C Header library is implemented in the programming language C. The
 	    tools with the likes of c_string for char, c_vector_string and c_file_editor for making 
 	    the working process on file contents more convenient operation are available. 
  	3․  The data structures developed using the principles of metaprogramming, which store 
-        information in the void * type and manage it through Preprocesor macro and the c_type_ctrl 
+        information in the void* type and manage it through Preprocesor macro and the c_type_ctrl 
 	    sub-library from 42SchoolCHeader library.
 	4․  Other tools, sub-libraries, testers.
   
